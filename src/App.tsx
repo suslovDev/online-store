@@ -12,19 +12,18 @@ import { AdminPage } from "./pages/AdminPage";
 
 const App = (): JSX.Element => {
   const dispatch = useAppDispatch();
-  const [initProducts, setInitProducts] = useState();
-
-  let productsLocal;
 
   useEffect(() => {
-    if (localStorage.products) {
-      productsLocal = JSON.parse(localStorage.products);
-      setInitProducts(productsLocal);
+    if (localStorage.products && localStorage.products.length) {
+      dispatch(initProds(localStorage.products));
     } else {
-      dispatch(initProds(initProducts));
+      dispatch(initProds(products));
     }
-    //dispatch(initProds(productsLocal));
-  }, [initProducts]);
+  }, []);
+
+/*   useEffect(() => {
+    dispatch(initProds(products));
+  }, []); */
 
   return (
     <Routes>

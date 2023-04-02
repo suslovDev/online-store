@@ -35,8 +35,8 @@ interface ProductsState {
 }
 
 const initialState: ProductsState = {
-    originProducts: [],
     products: [],
+    originProducts: [],
     order: {
         type: "name",
         order: "increase",
@@ -169,6 +169,10 @@ const productsSlice = createSlice({
                 state.products = state.products.filter(prod => prod.care.includes(state.filter.care)
                 )
             }
+
+        },
+
+        setFilterParam(state, action) {
 
         }
     }
