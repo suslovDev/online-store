@@ -7,6 +7,8 @@ import Crumbs from "../components/Crumbs";
 import { IProductItem } from "../components/IProductItem";
 import { useAppSelector, useAppDispatch } from "../hooks";
 import { addProduct } from "../store/products-slice";
+import CartItem from "../components/CartItem";
+import EditProductItem from "../components/EditProductItem";
 
 export const AdminPage: FC = () => {
   const dispatch = useAppDispatch();
@@ -15,7 +17,7 @@ export const AdminPage: FC = () => {
   const [care, setCare] = useState<any>([]);
 
   useEffect(() => {
-    if(!originProducts.length) return;
+    if (!originProducts.length) return;
     localStorage.products = JSON.stringify(originProducts);
   }, [originProducts]);
 
@@ -118,7 +120,12 @@ export const AdminPage: FC = () => {
       </form>
       <HorisontalGap gap='50px' />
       <h2 className={classes.heading}>Редактирование товаров:</h2>
-      
+      <HorisontalGap gap='50px' />
+      <div className={classes.wrap}>
+        {originProducts.map((prod) => (
+          <EditProductItem item={prod} />
+        ))}
+      </div>
       <HorisontalGap gap='50px' />
     </Container>
   );

@@ -14,3 +14,9 @@ form {
 .care {
   display: flex;
 }
+.wrap {
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    row-gap: 20px;
+}
