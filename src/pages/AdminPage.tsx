@@ -11,14 +11,13 @@ import { addProduct } from "../store/products-slice";
 export const AdminPage: FC = () => {
   const dispatch = useAppDispatch();
   const { originProducts } = useAppSelector((state) => state.products);
-
+  console.log("ОРИГИНАЛ:", originProducts);
   const [care, setCare] = useState<any>([]);
 
   useEffect(() => {
+    if(!originProducts.length) return;
     localStorage.products = JSON.stringify(originProducts);
-    console.log(JSON.parse(localStorage.products));
-    console.log(originProducts);
-  }, []);
+  }, [originProducts]);
 
   const params = [
     { url: "", name: "Главная" },

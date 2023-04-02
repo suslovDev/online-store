@@ -15,13 +15,15 @@ const App = (): JSX.Element => {
 
   useEffect(() => {
     if (localStorage.products && localStorage.products.length) {
-      dispatch(initProds(localStorage.products));
+      console.log("Заполняю из localStorage");
+      dispatch(initProds(JSON.parse(localStorage.products)));
     } else {
+      console.log("Заполняю из json");
       dispatch(initProds(products));
     }
   }, []);
 
-/*   useEffect(() => {
+  /*   useEffect(() => {
     dispatch(initProds(products));
   }, []); */
 
