@@ -1,0 +1,49 @@
+.price {
+  display: flex;
+  gap: 10px;
+}
+.price span:first-child {
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 150%;
+
+  color: #3f4e65 !important;
+}
+.price span:last-child {
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 150%;
+
+  color: #111111;
+}
+
+.range {
+  display: flex;
+  width: 100%;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 30px;
+}
+.range input {
+  all: unset;
+  width: 40%;
+  background: linear-gradient(
+    90deg,
+    rgba(255, 198, 80, 0.3) 0%,
+    rgba(254, 202, 110, 0.3) 97.25%
+  );
+  border-radius: 1000px;
+  padding: 4px;
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 15px;
+  text-align: center;
+
+  color: #3f4e65;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}

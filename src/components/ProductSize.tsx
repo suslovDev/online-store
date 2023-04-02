@@ -9,7 +9,7 @@ const ProductSize: FC<IProductSize> = ({ type, value }) => {
   ]);
   return (
     <div className={classes.wrap}>
-      <img src={`./${type}-img.png`} alt='' className={classes.img} />
+      <img src={`/${type}-img.png`} alt='' className={classes.img} />
       <span className={classes.value}>{`${value} ${typeMap.get(type)}`}</span>
     </div>
   );

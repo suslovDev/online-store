@@ -1,0 +1,30 @@
+.chkboxes {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  font-size: 14px;
+  line-height: 150%;
+
+  color: #3f4e65;
+}
+
+.chkboxes label {
+  display: flex;
+  gap: 10px;
+}
+.show-btn {
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 150%;
+  cursor: pointer;
+
+  color: #3f4e65;
+}
+.btn {
+  margin-left: 5px;
+  transition: transform 0.5s;
+}
+
+.opened {
+  transform: rotate(-180deg);
+}

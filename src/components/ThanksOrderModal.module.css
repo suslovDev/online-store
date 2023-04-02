@@ -1,0 +1,83 @@
+.wrap {
+  top: 0;
+  left: 0;
+  width: 100%;
+  display: flex;
+  height: 100vh;
+  position: fixed;
+}
+
+.overlay {
+  width: 100%;
+  z-index: 10;
+  height: 100%;
+  opacity: 0.5;
+  background: #111;
+  position: absolute;
+}
+
+.modal {
+  width: 100%;
+  z-index: 20;
+  height: 100%;
+  display: flex;
+  position: absolute;
+  align-items: center;
+  background: transparent;
+  justify-content: center;
+}
+
+.content {
+  gap: 24px;
+  width: 735px;
+  display: flex;
+  height: 424px;
+  border-radius: 8px;
+  position: relative;
+  align-items: center;
+  flex-direction: column;
+  background-color: #fff;
+  justify-content: center;
+}
+
+.content h2 {
+  color: #111111;
+  font-size: 40px;
+  font-weight: 500;
+  line-height: 120%;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.content p {
+  color: #3f4e65;
+  font-size: 20px;
+  font-weight: 300;
+  line-height: 120%;
+  text-align: center;
+}
+
+.content button {
+  top: 30px;
+  right: 30px;
+  cursor: pointer;
+  position: absolute;
+}
+
+.done {
+  width: 59px;
+  height: 59px;
+  position: relative;
+  border-radius: 50%;
+  background: #ffc85e;
+}
+
+.done:after {
+  content: "";
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  top: calc(50% - 12px);
+  left: calc(50% - 12px);
+  background: url(/public/done-img.png);
+}

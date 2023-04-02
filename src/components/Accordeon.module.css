@@ -1,0 +1,25 @@
+.header {
+  display: flex;
+  align-items: center;
+  width: fit-content;
+  position: relative;
+  cursor: pointer;
+  margin-bottom: 15px;
+}
+
+.btn {
+  margin-left: 5px;
+  transition: transform 0.5s;
+}
+
+.opened {
+  transform: rotate(-180deg);
+}
+
+.body {
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 150%;
+
+  color: #3f4e65;
+}

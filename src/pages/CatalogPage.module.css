@@ -1,0 +1,36 @@
+
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 25px;
+}
+.top {
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+}
+.top h2 {
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 120%;
+  text-transform: uppercase;
+
+  color: #111111;
+}
+
+
+.bottom {
+  display: flex;
+  gap: 100px;
+}
+
+.products {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 50px;
+}
+

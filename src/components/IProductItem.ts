@@ -1,12 +1,15 @@
+type sizeType = "weight" | "value";
 export interface IProductItem {
-    url: string;
-    title: string;
-    sizeType: "weight" | "value";
-    size: number;
     barcode: string | number;
-    manufacturer: string;
     brand: string;
     description: string;
+    manufacturer: string;
     price: number;
+    size: number;
+    sizeType: sizeType;
+    title: string;
+    url: string;
+    care: Array<string>;
 }
+
 

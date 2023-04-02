@@ -1,0 +1,14 @@
+.heading {
+  font-weight: 500;
+  font-size: 40px;
+  line-height: 120%;
+  text-transform: uppercase;
+
+  color: #111111;
+}
+
+.checkout {
+  display: flex;
+  justify-content: space-between;
+  padding: 50px 0 ;
+}

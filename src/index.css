@@ -1,5 +1,16 @@
 * {
   box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+button,
+ul,
+li {
+  all: unset;
+}
+a {
+  all: unset;
+  cursor: pointer;
 }
 body {
   margin: 0;

@@ -5,6 +5,7 @@ import ProductFeautere from "./ProductFeature";
 import Price from "./Price";
 import Button from "./Button";
 import ProductSize from "./ProductSize";
+import { Navigate, useNavigate } from "react-router-dom";
 
 const ProductItem: FC<{ item: IProductItem }> = ({ item }) => {
   let {
@@ -18,9 +19,11 @@ const ProductItem: FC<{ item: IProductItem }> = ({ item }) => {
     description,
     price,
   } = item;
+  const navigate = useNavigate();
+
   return (
     <div className={classes.product}>
-      <div className={classes.header}>
+      <div className={classes.header} onClick={() => navigate(`${barcode}`)}>
         <img src={url} alt='' className={classes.img} />
       </div>
       <div className={classes.content}>
