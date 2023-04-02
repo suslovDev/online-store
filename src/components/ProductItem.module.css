@@ -1,0 +1,56 @@
+.product {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 326px;
+  height: 490px;
+  background-color: #fff;
+  padding: 40px 30px 30px;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+.header {
+  height: 50%;
+}
+
+.img {
+  height: 100%;
+}
+
+.content {
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.accent {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 130%;
+
+  color: #111111;
+}
+
+.title {
+  font-weight: 500;
+}
+
+.price {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 16px;
+  line-height: 130%;
+
+  color: #111111;
+}
+
+.footer {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

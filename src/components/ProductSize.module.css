@@ -1,0 +1,16 @@
+.wrap {
+  display: flex;
+  gap: 8px;
+  height: 15px;
+  align-items: center;
+}
+.img {
+  width: auto;
+  height: 100%;
+}
+.value {
+  font-family: "Inter";
+  font-weight: 400;
+  font-size: 12px;
+  color: #3f4e65;
+}

@@ -1,0 +1,40 @@
+.wrap {
+  display: flex;
+  align-items: center;
+  gap: 28px;
+  width: fit-content;
+  position: relative;
+}
+
+.total {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 24px;
+  height: 24px;
+  border: 2px solid #fff;
+  border-radius: 50%;
+  background-color: #ffc85e;
+  position: absolute;
+  top: -8px;
+  left: 28px;
+  color: #fff;
+  font-weight: 700;
+  font-size: 14px;
+}
+.images img {
+  width: auto;
+  height: 28px;
+}
+
+.texts {
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  font-weight: 300;
+  font-size: 12px;
+  line-height: 150%;
+  color: #3f4e65;
+}
