@@ -117,6 +117,9 @@ export const AdminPage: FC = () => {
         <button type='submit'>Добавить товар</button>
       </form>
       <HorisontalGap gap='50px' />
+      <h2 className={classes.heading}>Редактирование товаров:</h2>
+      
+      <HorisontalGap gap='50px' />
     </Container>
   );
 };

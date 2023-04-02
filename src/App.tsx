@@ -23,10 +23,6 @@ const App = (): JSX.Element => {
     }
   }, []);
 
-  /*   useEffect(() => {
-    dispatch(initProds(products));
-  }, []); */
-
   return (
     <Routes>
       <Route path='/' element={<Layout />}>
