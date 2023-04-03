@@ -9,7 +9,7 @@ const ThanksOrderModal: FC<IThankOrder> = ({ onClick }) => {
       <div className={classes.modal}>
         <div className={classes.content}>
           <button onClick={onClick}>
-            <img src='/close-img.png' alt='' />
+            <img src='./close-img.png' alt='' />
           </button>
           <div className={classes.done}></div>
           <h2>СПАСИБО ЗА ЗАКАЗ</h2>

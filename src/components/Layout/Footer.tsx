@@ -9,7 +9,7 @@ const Footer: FC = () => {
       <Container>
         <div className={classes["footer-content"]}>
           <div className={classes["left-column"]}>
-            <img src='/logo_Sultan.png' alt='' width={156} />
+            <img src='./logo_Sultan.png' alt='' width={156} />
             <p className='description'>
               Компания «Султан» — снабжаем розничные магазины товарами "под
               ключ" в Кокчетаве и Акмолинской области

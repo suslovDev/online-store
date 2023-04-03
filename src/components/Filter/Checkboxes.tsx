@@ -62,7 +62,7 @@ const Checkboxes: FC = () => {
         className={classes["show-btn"]}>
         {!showAll ? "Показать все" : "Свернуть"}
         <img
-          src='/drop-img.png'
+          src='./drop-img.png'
           alt=''
           width={7}
           className={`${classes.btn} ${showAll ? classes.opened : ""}`}
