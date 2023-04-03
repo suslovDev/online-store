@@ -22,11 +22,11 @@ const App = (): JSX.Element => {
   useEffect(() => {
     if (localStorage.getItem("products")) {
       console.log("Заполняю из localStorage");
-      alert("Есть!");
+
       dispatch(initProds(JSON.parse(localStorage.products)));
     } else {
       console.log("Заполняю из json");
-      alert("нет!");
+
       dispatch(initProds(products));
       localStorage.products = JSON.stringify(products);
     }

@@ -125,7 +125,7 @@ export const AdminPage: FC = () => {
       <HorisontalGap gap='50px' />
       <div className={classes.wrap}>
         {originProducts.map((prod) => (
-          <EditProductItem item={prod}/*  id={prod.barcode as number} */ />
+          <EditProductItem item={prod}/>
         ))}
       </div>
       <HorisontalGap gap='50px' />

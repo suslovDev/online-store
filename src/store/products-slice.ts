@@ -154,7 +154,6 @@ const productsSlice = createSlice({
 
 
             if (state.filter.manufacturer.includes(action.payload) == false) {
-                console.log("Впервые", action.payload)
                 state.filter.manufacturer.push(action.payload)
             } else {
                 state.filter.manufacturer = state.filter.manufacturer.filter(item => item !== action.payload)
@@ -162,7 +161,7 @@ const productsSlice = createSlice({
 
             if (state.filter.manufacturer.length && action.payload) {
                 state.products = state.originProducts.filter(
-                    prod => predicate(state.filter.manufacturer, prod.manufacturer))//state.filter.manufacturer.includes(prod.manufacturer))
+                    prod => predicate(state.filter.manufacturer, prod.manufacturer))
 
             } else {
                 state.products = state.originProducts
