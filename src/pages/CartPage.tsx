@@ -42,12 +42,14 @@ export const CartPage: FC = () => {
           </li>
         ))}
       </ul>
-      <div className={classes.checkout}>
-        <Button variant='standart' onClick={() => setIsopen(true)}>
-          Оформить заказ
-        </Button>
-        <Price currency='KZT' type='large' value={+totalValue} />
-      </div>
+      {cart.length !== 0 && (
+        <div className={classes.checkout}>
+          <Button variant='standart' onClick={() => setIsopen(true)}>
+            Оформить заказ
+          </Button>
+          <Price currency='KZT' type='large' value={+totalValue} />
+        </div>
+      )}
     </Container>
   );
 };
