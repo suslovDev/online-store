@@ -7,9 +7,12 @@ import { IProductItem } from "./IProductItem";
 import ProductSize from "./ProductSize";
 
 import { useAppDispatch, useAppSelector } from "../hooks";
-import { replaceProduct } from "../store/products-slice";
+import { removeProduct, replaceProduct } from "../store/products-slice";
 
-const EditProductItem: FC<{ item: IProductItem }> = ({ item }) => {
+const EditProductItem: FC<{ item: IProductItem; id: number }> = ({
+  item,
+  id,
+}) => {
   const dispatch = useAppDispatch();
 
   const [barcode, setBarcode] = useState(item.barcode);
@@ -37,7 +40,7 @@ const EditProductItem: FC<{ item: IProductItem }> = ({ item }) => {
       url,
     };
     console.log(replacement);
-     dispatch(replaceProduct(replacement));
+    dispatch(replaceProduct(replacement));
   }, [barcode, brand, description, manufacturer, price, size, title, url]);
 
   useEffect(() => {
@@ -49,7 +52,13 @@ const EditProductItem: FC<{ item: IProductItem }> = ({ item }) => {
         <img src={item.url} alt='' className={classes.img} />
 
         <div className={classes.actions}>
-          <Button variant='remove' onClick={() => {}} />
+          <Button
+            variant='remove'
+            onClick={() => {
+              console.log(id);
+             dispatch(removeProduct(id));
+            }}
+          />
         </div>
       </div>
 
