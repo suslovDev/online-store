@@ -2,8 +2,8 @@ import classes from "./ProductItem.module.css";
 import { IProductItem } from "./IProductItem";
 import { FC } from "react";
 import ProductFeautere from "./ProductFeature";
-import Price from "./Price";
-import Button from "./Button";
+import Price from "../UI/Price";
+import Button from "../UI/Button";
 import ProductSize from "./ProductSize";
 import { Navigate, useNavigate } from "react-router-dom";
 

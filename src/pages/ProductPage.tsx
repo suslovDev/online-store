@@ -1,10 +1,10 @@
 import classes from "./ProductPage.module.css";
 import { FC } from "react";
 import { useParams, Link } from "react-router-dom";
-import Container from "../components/Container";
-import ProductSelf from "../components/ProductSelf";
-import { useAppSelector } from "../hooks";
-import Crumbs from "../components/Crumbs";
+import Container from "../components/Layout/Container";
+import ProductSelf from "../components/Product/ProductSelf";
+import { useAppSelector } from "../hooks/hooks";
+import Crumbs from "../components/Layout/Crumbs";
 
 export const ProductPage: FC = () => {
   const { id } = useParams();

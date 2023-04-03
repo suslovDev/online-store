@@ -1,7 +1,7 @@
 import classes from "./Footer.module.css";
 import { FC } from "react";
 import Container from "./Container";
-import Button from "./Button";
+import Button from "../UI/Button";
 
 const Footer: FC = () => {
   return (

@@ -1,11 +1,11 @@
 import { useEffect, useState } from "react";
 import { Route, Routes } from "react-router-dom";
-import Layout from "./components/Layout";
+import Layout from "./components/Layout/Layout";
 import { CartPage } from "./pages/CartPage";
 import { CatalogPage } from "./pages/CatalogPage";
 import { HomePage } from "./pages/HomePage";
 import { ProductPage } from "./pages/ProductPage";
-import { useAppDispatch, useAppSelector } from "./hooks";
+import { useAppDispatch, useAppSelector } from "./hooks/hooks";
 import { initProds } from "./store/products-slice";
 import products from "./products.json";
 import { AdminPage } from "./pages/AdminPage";

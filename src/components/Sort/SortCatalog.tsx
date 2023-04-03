@@ -2,8 +2,8 @@ import classes from "./SortCatalog.module.css";
 import { useEffect } from "react";
 import { FC } from "react";
 
-import { useAppDispatch, useAppSelector } from "../hooks";
-import { sortProds, setOrderType, setOrder } from "../store/products-slice";
+import { useAppDispatch, useAppSelector } from "../../hooks/hooks";
+import { sortProds, setOrderType, setOrder } from "../../store/products-slice";
 
 const SortCatalog: FC = () => {
   const { order, type } = useAppSelector((state) => state.products.order);

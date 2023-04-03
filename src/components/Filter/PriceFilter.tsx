@@ -1,7 +1,7 @@
 import classes from "./PriceFilter.module.css";
 import { FC, useState } from "react";
-import { useAppDispatch } from "../hooks";
-import { filterByPrace } from "../store/products-slice";
+import { useAppDispatch } from "../../hooks/hooks";
+import { filterByPrace } from "../../store/products-slice";
 
 const PriceFilter: FC = () => {
   const [from, setFrom] = useState<any>(0);

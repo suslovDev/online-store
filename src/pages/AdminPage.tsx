@@ -1,14 +1,14 @@
 import { FC, useRef, useState, useEffect } from "react";
-import Container from "../components/Container";
-import HorisontalGap from "../components/HorisontalGap";
+import Container from "../components/Layout/Container";
+import HorisontalGap from "../components/Layout/HorisontalGap";
 import classes from "./AdminPage.module.css";
 
-import Crumbs from "../components/Crumbs";
-import { IProductItem } from "../components/IProductItem";
-import { useAppSelector, useAppDispatch } from "../hooks";
+import Crumbs from "../components/Layout/Crumbs";
+import { IProductItem } from "../components/Product/IProductItem";
+import { useAppSelector, useAppDispatch } from "../hooks/hooks";
 import { addProduct } from "../store/products-slice";
-import CartItem from "../components/CartItem";
-import EditProductItem from "../components/EditProductItem";
+import CartItem from "../components/Cart/CartItem";
+import EditProductItem from "../components/admin-panel/EditProductItem";
 
 export const AdminPage: FC = () => {
   const dispatch = useAppDispatch();

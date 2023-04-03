@@ -1,4 +1,4 @@
-import { IProductItem } from "../components/IProductItem";
+import { IProductItem } from "../components/Product/IProductItem";
 export type TItem = {
     manufacturer: string,
     count: number

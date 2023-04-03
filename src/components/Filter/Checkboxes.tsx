@@ -1,8 +1,8 @@
 import classes from "./Checkboxes.module.css";
 import { FC, useState, useEffect } from "react";
-import { useAppDispatch, useAppSelector } from "../hooks";
-import { filterByManufact } from "../store/products-slice";
-import { TItem, getPair } from "../helpers/get-pair";
+import { useAppDispatch, useAppSelector } from "../../hooks/hooks";
+import { filterByManufact } from "../../store/products-slice";
+import { TItem, getPair } from "../../helpers/get-pair";
 
 const Checkboxes: FC = () => {
   const dispatch = useAppDispatch();

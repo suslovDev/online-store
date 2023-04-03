@@ -1,9 +1,9 @@
 import classes from "./CareFilterTop.module.css";
 import { FC, useState } from "react";
 import { ICareFilterTop } from "./ICareFilterTop";
-import { useAppDispatch, useAppSelector } from "../hooks";
-import { filterByCare } from "../store/products-slice";
-import { setCurrent } from "../store/ui-slice";
+import { useAppDispatch, useAppSelector } from "../../hooks/hooks";
+import { filterByCare } from "../../store/products-slice";
+import { setCurrent } from "../../store/ui-slice";
 
 const CareFilterTop: FC<ICareFilterTop> = ({ selected, list, onSelect }) => {
   const { currentCare } = useAppSelector((state) => state.ui);

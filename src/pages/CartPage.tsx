@@ -1,14 +1,14 @@
 import { FC, useState } from "react";
-import Button from "../components/Button";
-import CartItem from "../components/CartItem";
-import Container from "../components/Container";
-import Price from "../components/Price";
-import HorisontalGap from "../components/HorisontalGap";
+import Button from "../components/UI/Button";
+import CartItem from "../components/Cart/CartItem";
+import Container from "../components/Layout/Container";
+import Price from "../components/UI/Price";
+import HorisontalGap from "../components/Layout/HorisontalGap";
 import classes from "./CartPage.module.css";
 
-import { useAppSelector, useAppDispatch } from "../hooks";
-import Crumbs from "../components/Crumbs";
-import ThanksOrderModal from "../components/ThanksOrderModal";
+import { useAppSelector, useAppDispatch } from "../hooks/hooks";
+import Crumbs from "../components/Layout/Crumbs";
+import ThanksOrderModal from "../components/Cart/ThanksOrderModal";
 import { clearCart } from "../store/cart-slice";
 
 export const CartPage: FC = () => {

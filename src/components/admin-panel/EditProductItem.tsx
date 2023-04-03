@@ -1,13 +1,13 @@
 import { FC, useState, useEffect } from "react";
 
-import Button from "./Button";
+import Button from "../UI/Button";
 import classes from "./EditProductItem.module.css";
-import { IProductItem } from "./IProductItem";
+import { IProductItem } from "../Product/IProductItem";
 
-import ProductSize from "./ProductSize";
+import ProductSize from "../Product/ProductSize";
 
-import { useAppDispatch, useAppSelector } from "../hooks";
-import { removeProduct, replaceProduct } from "../store/products-slice";
+import { useAppDispatch, useAppSelector } from "../../hooks/hooks";
+import { removeProduct, replaceProduct } from "../../store/products-slice";
 
 const EditProductItem: FC<{ item: IProductItem; id?: number }> = ({
   item,

@@ -1,5 +1,5 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
-import { IProductItem } from "../components/IProductItem";
+import { IProductItem } from "../components/Product/IProductItem";
 interface IOrder {
     type: string;
     order: string;

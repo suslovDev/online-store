@@ -1,13 +1,13 @@
 import { FC } from "react";
-import AmountControl from "./AmountControl";
-import Button from "./Button";
+import AmountControl from "../UI/AmountControl";
+import Button from "../UI/Button";
 import classes from "./CartItem.module.css";
-import { IProductItem } from "./IProductItem";
-import Price from "./Price";
-import ProductSize from "./ProductSize";
+import { IProductItem } from "../Product/IProductItem";
+import Price from "../UI/Price";
+import ProductSize from "../Product/ProductSize";
 
-import { useAppDispatch, useAppSelector } from "../hooks";
-import { plusToCart, minusFromCart, removeFromCart } from "../store/cart-slice";
+import { useAppDispatch, useAppSelector } from "../../hooks/hooks";
+import { plusToCart, minusFromCart, removeFromCart } from "../../store/cart-slice";
 
 const CartItem: FC<{ item: IProductItem }> = ({ item }) => {
   const { cart } = useAppSelector((state) => state.cart);

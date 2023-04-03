@@ -1,16 +1,16 @@
 import classes from "./CatalogPage.module.css";
 import { FC, useState } from "react";
-import { useAppSelector, useAppDispatch } from "../hooks";
-import ProductList from "../components/ProductList";
-import Crumbs from "../components/Crumbs";
-import Container from "../components/Container";
-import SortCatalog from "../components/SortCatalog";
-import HorisontalGap from "../components/HorisontalGap";
-import FilterAside from "../components/FilterAside";
-import Pagination from "../components/Pagination";
+import { useAppSelector, useAppDispatch } from "../hooks/hooks";
+import ProductList from "../components/Products/ProductList";
+import Crumbs from "../components/Layout/Crumbs";
+import Container from "../components/Layout/Container";
+import SortCatalog from "../components/Sort/SortCatalog";
+import HorisontalGap from "../components/Layout/HorisontalGap";
+import FilterAside from "../components/Filter/FilterAside";
+import Pagination from "../components/UI/Pagination";
 import { CARE } from "../data/care";
 import { setCurrent } from "../store/ui-slice";
-import CareFilterTop from "../components/CareFilterTop";
+import CareFilterTop from "../components/Filter/CareFilterTop";
 import { filterByCare } from "../store/products-slice";
 
 const params = [

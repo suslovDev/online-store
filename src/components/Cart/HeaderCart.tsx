@@ -1,7 +1,7 @@
 import classes from "./HeaderCart.module.css";
 import { IHeaderCart } from "./IHeaderCart";
 import { FC, useEffect, useState } from "react";
-import Price from "./Price";
+import Price from "../UI/Price";
 import { useNavigate } from "react-router-dom";
 
 const HeaderCart: FC<IHeaderCart> = ({ items, total }) => {

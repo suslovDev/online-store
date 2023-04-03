@@ -1,9 +1,9 @@
-import Button from "./Button";
+import Button from "../UI/Button";
 import Container from "./Container";
 import classes from "./Header.module.css";
-import HeaderCart from "./HeaderCart";
-import SearchForm from "./SearchForm";
-import { useAppSelector } from "../hooks";
+import HeaderCart from "../Cart/HeaderCart";
+import SearchForm from "../UI/SearchForm";
+import { useAppSelector } from "../../hooks/hooks";
 
 const Header = () => {
   const { cart, total } = useAppSelector((state) => state.cart);

@@ -46,7 +46,7 @@
   display: block;
   width: 16px;
   height: 16px;
-  background-image: url("../../public/drop-img.png");
+  background-image: url("/public/drop-img.png");
   background-position: center;
   background-size: 8px;
   background-repeat: no-repeat;
