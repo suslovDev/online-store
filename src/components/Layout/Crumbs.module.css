@@ -1,18 +1,18 @@
 .crumbs {
-    display: flex;
-    font-weight: 300;
-    font-size: 14px;
-    color: #3f4e65;
-  }
-  
-  .crumbs li {
-    padding: 0 10px;
-    border-right: 1px dashed rgba(63, 78, 101, 0.3);
-  }
-  .crumbs li:last-child {
-    border-right: none;
-    opacity: 0.5;
-    pointer-events: none;
-    cursor: default;
-  }
-  
+ display:flex;
+color:#3f4e65;
+font-size:14px;
+font-weight:300; 
+}
+
+.crumbs li {
+ padding:0 10px;
+border-right:1px dashed rgba(63, 78, 101, 0.3); 
+}
+
+.crumbs li:last-child {
+ opacity:0.5;
+cursor:default;
+border-right:none;
+pointer-events:none; 
+}
