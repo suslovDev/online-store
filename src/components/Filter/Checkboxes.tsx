@@ -32,31 +32,21 @@ const Checkboxes: FC = () => {
   };
 
   let list: TItem[] = [];
-  const handleClick = () => {
-    //console.log(inputValue);
+/*   const handleClick = () => {
     for (let i = 0; i < listAll.length; i++) {
       if (listAll[i].manufacturer.includes(inputValue)) {
         list.push(listAll[i]);
       }
     }
     setShow([...list]);
-  };
+  }; */
 
   return (
     <div>
- {/*      <input
-        type='text'
-        value={inputValue}
-        onChange={(e) => {
-          dispatch(filterByManufact(""));
-          setInputValue(e.target.value);
-        }}
-      />
-      <div onClick={handleClick}>подтвердить</div> */}
       <div className={classes.chkboxes}>
         {showList.map((item) => {
           return (
-            <label>
+            <label key={item.manufacturer}>
               <input
                 checked={predicate(manufacturer, item.manufacturer)}
                 type='checkbox'

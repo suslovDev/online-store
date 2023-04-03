@@ -5,7 +5,9 @@ import ProductFeautere from "./ProductFeature";
 import Price from "../UI/Price";
 import Button from "../UI/Button";
 import ProductSize from "./ProductSize";
-import { Navigate, useNavigate } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+import { useAppDispatch } from "../../hooks/hooks";
+import { plusToCart } from "../../store/cart-slice";
 
 const ProductItem: FC<{ item: IProductItem }> = ({ item }) => {
   let {
@@ -21,14 +23,16 @@ const ProductItem: FC<{ item: IProductItem }> = ({ item }) => {
   } = item;
   const navigate = useNavigate();
 
+  const dispatch = useAppDispatch();
+
   return (
     <div className={classes.product}>
-      <div className={classes.header} onClick={() => navigate(`${barcode}`)}>
+      <div className={classes.header}>
         <img src={url} alt='' className={classes.img} />
       </div>
       <div className={classes.content}>
         <ProductSize type={sizeType} value={size} />
-        <h3 className={classes.title}>
+        <h3 className={classes.title} onClick={() => navigate(`${barcode}`)}>
           <span className={classes.accent}>{title} </span>
           {description}
         </h3>
@@ -39,7 +43,11 @@ const ProductItem: FC<{ item: IProductItem }> = ({ item }) => {
       </div>
       <div className={classes.footer}>
         <Price currency='KZT' value={price} />
-        <Button onClick={() => {}} variant='buy'>
+        <Button
+          onClick={() => {
+            dispatch(plusToCart({ product: item, quantity: 1 }));
+          }}
+          variant='buy'>
           В корзину
         </Button>
       </div>

@@ -25,6 +25,7 @@ const CareFilterTop: FC<ICareFilterTop> = ({ selected, list, onSelect }) => {
       {list.map((item) => {
         return (
           <li
+            key={item.id}
             onClick={handleClick.bind(null, item.id)}
             className={`${item.id === selected ? classes.selected : ""}`}>
             {item.heading}

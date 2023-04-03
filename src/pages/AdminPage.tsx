@@ -4,10 +4,8 @@ import HorisontalGap from "../components/Layout/HorisontalGap";
 import classes from "./AdminPage.module.css";
 
 import Crumbs from "../components/Layout/Crumbs";
-import { IProductItem } from "../components/Product/IProductItem";
 import { useAppSelector, useAppDispatch } from "../hooks/hooks";
 import { addProduct } from "../store/products-slice";
-import CartItem from "../components/Cart/CartItem";
 import EditProductItem from "../components/admin-panel/EditProductItem";
 
 export const AdminPage: FC = () => {
@@ -25,8 +23,6 @@ export const AdminPage: FC = () => {
 
   const params = [
     { url: "", name: "Главная" },
-    { url: "catalog", name: "Каталог" },
-    { url: "cart", name: "Корзина" },
     { url: "admin", name: "Админка" },
   ];
 
@@ -70,7 +66,6 @@ export const AdminPage: FC = () => {
     return product;
   };
   const handleSubmit: React.FormEventHandler<HTMLFormElement> = (e) => {
-    //////////////Эта функция создает новый продукт который готов для добавления в базу товаров
     e.preventDefault();
     let product = createProduct();
     dispatch(addProduct(product));
@@ -125,7 +120,7 @@ export const AdminPage: FC = () => {
       <HorisontalGap gap='50px' />
       <div className={classes.wrap}>
         {originProducts.map((prod) => (
-          <EditProductItem item={prod}/>
+          <EditProductItem item={prod} />
         ))}
       </div>
       <HorisontalGap gap='50px' />

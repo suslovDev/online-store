@@ -12,7 +12,7 @@ const Crumbs: FC<ICrumbs> = ({ params }) => {
         <ul className={classes.crumbs}>
           {params.map((link) => {
             return (
-              <li>
+              <li key={link.url}>
                 <Link to={`/${link.url}`}>{link.name}</Link>
               </li>
             );

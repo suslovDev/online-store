@@ -39,10 +39,18 @@ const FilterAside: FC = () => {
         <Checkboxes />
         {CARE.map((item) => {
           return (
-            <CareList id={item.id} selected={selectedCare} title={item.heading}>
+            <CareList
+              id={item.id}
+              selected={selectedCare}
+              title={item.heading}
+              key={Math.random().toString(16)}>
               {item.links.map((link) => {
                 return (
-                  <li onClick={handleSelect.bind(null, item.id)}>{link}</li>
+                  <li
+                    key={Math.random().toString(16)}
+                    onClick={handleSelect.bind(null, item.id)}>
+                    {link}
+                  </li>
                 );
               })}
             </CareList>

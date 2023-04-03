@@ -38,6 +38,7 @@ const Pagination: FC<IPagination> = ({ products, perPage, onShowSlice }) => {
       {pageNumbers.map((number) => {
         return (
           <button
+            key={Math.random().toString(16)}
             onClick={() => handlePaginate(number)}
             className={`${number === currentPage ? classes.current : ""}`}>
             {number}
