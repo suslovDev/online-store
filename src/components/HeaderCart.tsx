@@ -26,7 +26,7 @@ const HeaderCart: FC<IHeaderCart> = ({ items, total }) => {
       }}>
       <div className={classes.icon}>
         <div>
-          <img src='/cart-img.png' alt='' />
+          <img src='./cart-img.png' alt='' />
         </div>
         <span className={badgeClasses}>{items.length}</span>
       </div>

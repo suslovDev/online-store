@@ -16,7 +16,7 @@ const Button: FC<IButton> = ({ variant, type, onClick, children }) => {
       {variant === "buy" && (
         <button type={type} className={classes.button} onClick={onClick}>
           {children}
-          <img src='/buy-img.png' width={27} alt='' />
+          <img src='./buy-img.png' width={27} alt='' />
         </button>
       )}
       {variant === "buy-large" && (
@@ -25,7 +25,7 @@ const Button: FC<IButton> = ({ variant, type, onClick, children }) => {
           className={`${classes.button} ${classes.large}`}
           onClick={onClick}>
           {children}
-          <img src='/buy-img.png' width={27} alt='' />
+          <img src='./buy-img.png' width={27} alt='' />
         </button>
       )}
       {variant === "catalog " && (
@@ -34,7 +34,7 @@ const Button: FC<IButton> = ({ variant, type, onClick, children }) => {
           className={`${classes.button} ${classes.standart}`}
           onClick={onClick}>
           {children}
-          <img src='/catalog-img.png' width={15} alt='' />
+          <img src='./catalog-img.png' width={15} alt='' />
         </button>
       )}
       {variant === "search" && (
@@ -43,7 +43,7 @@ const Button: FC<IButton> = ({ variant, type, onClick, children }) => {
           className={`${classes.button} ${classes.round}`}
           onClick={onClick}>
           {children}
-          <img src='/search-img.png' width={18} alt='' />
+          <img src='./search-img.png' width={18} alt='' />
         </button>
       )}
       {variant === "download" && (
@@ -52,7 +52,7 @@ const Button: FC<IButton> = ({ variant, type, onClick, children }) => {
           className={`${classes.button} ${classes.large}`}
           onClick={onClick}>
           {children}
-          <img src='/dwld-img.png' width={17} alt='' />
+          <img src='./dwld-img.png' width={17} alt='' />
         </button>
       )}
       {variant === "remove" && (
@@ -61,7 +61,7 @@ const Button: FC<IButton> = ({ variant, type, onClick, children }) => {
           className={`${classes.button} ${classes["round-large"]}`}
           onClick={onClick}>
           {children}
-          <img src='/remove-img.png' width={27} alt='' />
+          <img src='./remove-img.png' width={27} alt='' />
         </button>
       )}
     </>
