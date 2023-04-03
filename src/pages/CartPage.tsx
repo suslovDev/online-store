@@ -26,11 +26,14 @@ export const CartPage: FC = () => {
     setIsopen(false);
     dispatch(clearCart());
   };
+
   return (
     <Container>
       {isOpen && <ThanksOrderModal onClick={handleOrderDone} />}
       <Crumbs params={params} />
-      <h2 className={classes.heading}>Корзина</h2>
+      <h2 className={classes.heading}>{`Корзина ${
+        cart.length ? "" : "пуста!"
+      }`}</h2>
       <HorisontalGap gap='50px' />
       <ul>
         {cart.map((item) => (
