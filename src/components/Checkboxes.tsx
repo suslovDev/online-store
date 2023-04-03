@@ -4,7 +4,6 @@ import { useAppDispatch, useAppSelector } from "../hooks";
 import { filterByManufact } from "../store/products-slice";
 import { TItem, getPair } from "../helpers/get-pair";
 
-
 const Checkboxes: FC = () => {
   const dispatch = useAppDispatch();
 
@@ -21,7 +20,6 @@ const Checkboxes: FC = () => {
   console.log(listAll);
 
   let showList = showAll ? listAll : listShow;
-  /* console.log("from app:", manufacturer); */
 
   const predicate = (arr: string[], str: string) => {
     for (let i = 0; i < arr.length; i++) {
@@ -43,8 +41,6 @@ const Checkboxes: FC = () => {
       }
     }
     setShow([...list]);
-
-    //dispatch(filterByManufact(inputValue));
   };
 
   return (
@@ -55,14 +51,13 @@ const Checkboxes: FC = () => {
         onChange={(e) => setInputValue(e.target.value)}
       />
       <div onClick={handleClick}>подтвердить</div>
-      <div onClick={() => dispatch(filterByManufact(""))}>СБРОСИТЬ ЧЕКСЫ</div>
       <div className={classes.chkboxes}>
-        {listShow.map((item) => {
+        {showList.map((item) => {
           return (
             <label>
               <input
                 //checked={manufacturer.includes(item.manufacturer)}
-                /* checked={predicate(manufacturer, item.manufacturer)} */
+                checked={predicate(manufacturer, item.manufacturer)}
                 type='checkbox'
                 onClick={handleCheck.bind(null, item.manufacturer)}
               />
