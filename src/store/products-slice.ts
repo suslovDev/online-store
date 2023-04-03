@@ -76,6 +76,12 @@ const productsSlice = createSlice({
         addProduct(state, action) {//////////////////////////////////////////////////////////////
             state.originProducts.push(action.payload)
         },
+        replaceProduct(state, action: PayloadAction<any>) {
+            state.originProducts = state.originProducts.map(prod => prod.barcode === action.payload.barcode ? action.payload : prod);
+        },
+        removeProduct(state, action) {
+            state.originProducts = state.originProducts.filter(prod => prod.barcode !== action.payload);
+        },
         sortProds(state) {
             let { order } = state.order;
             let { products } = state;
@@ -180,6 +186,8 @@ const productsSlice = createSlice({
 
 export const { initProds,
     addProduct,
+    replaceProduct,
+    removeProduct,
     sortProds,
     setOrderType,
     setOrder, filterByCare,
