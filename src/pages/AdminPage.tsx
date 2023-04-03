@@ -15,10 +15,12 @@ export const AdminPage: FC = () => {
   const { originProducts } = useAppSelector((state) => state.products);
   console.log("ОРИГИНАЛ:", originProducts);
   const [care, setCare] = useState<any>([]);
+  const [init, setInit] = useState(false);
+  if (originProducts.length && init) localStorage.removeItem("products");
 
   useEffect(() => {
-    if (!originProducts.length) return;
-    localStorage.products = JSON.stringify(originProducts);
+    if (init) return;
+    setInit(true);
   }, [originProducts]);
 
   const params = [
@@ -123,7 +125,7 @@ export const AdminPage: FC = () => {
       <HorisontalGap gap='50px' />
       <div className={classes.wrap}>
         {originProducts.map((prod) => (
-          <EditProductItem item={prod} id={prod.barcode as number}/>
+          <EditProductItem item={prod} id={prod.barcode as number} />
         ))}
       </div>
       <HorisontalGap gap='50px' />
