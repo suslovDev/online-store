@@ -9,7 +9,7 @@ import ProductSize from "./ProductSize";
 import { useAppDispatch, useAppSelector } from "../hooks";
 import { removeProduct, replaceProduct } from "../store/products-slice";
 
-const EditProductItem: FC<{ item: IProductItem; id: number }> = ({
+const EditProductItem: FC<{ item: IProductItem; id?: number }> = ({
   item,
   id,
 }) => {
@@ -27,6 +27,17 @@ const EditProductItem: FC<{ item: IProductItem; id: number }> = ({
   const [init, setInit] = useState(false);
 
   useEffect(() => {
+    setBarcode(item.barcode);
+    setBrand(item.brand);
+    setDescription(item.description);
+    setManufacturer(item.manufacturer);
+    setPrice(item.price);
+    setSize(item.size);
+    setTitle(item.title);
+    setUrl(item.url);
+  }, [item]);
+
+  useEffect(() => {
     if (!init) return;
     const replacement = {
       ...item,
@@ -39,7 +50,7 @@ const EditProductItem: FC<{ item: IProductItem; id: number }> = ({
       title,
       url,
     };
-    console.log(replacement);
+    // console.log(replacement);
     dispatch(replaceProduct(replacement));
   }, [barcode, brand, description, manufacturer, price, size, title, url]);
 
@@ -56,7 +67,7 @@ const EditProductItem: FC<{ item: IProductItem; id: number }> = ({
             variant='remove'
             onClick={() => {
               console.log(id);
-             dispatch(removeProduct(id));
+              dispatch(removeProduct(item.barcode));
             }}
           />
         </div>
