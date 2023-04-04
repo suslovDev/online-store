@@ -1,67 +1,103 @@
 .item {
-  display: flex;
-  justify-content: space-between;
-  width: 400px;
-  height: 250px;
-  border: 2px dashed rgba(63, 78, 101, 0.3);
-  border-radius: 8px;
-  padding: 10px;
+ width:400px;
+display:flex;
+height:250px;
+padding:10px;
+border-radius:8px;
+justify-content:space-between;
+border:2px dashed rgba(63, 78, 101, 0.3); 
 }
+
 .image {
-  display: flex;
-  justify-content: space-between;
-  flex-direction: column;
-  height: 100%;
+ height:100%;
+display:flex;
+flex-direction:column;
+justify-content:space-between; 
 }
+
 .img {
-  height: 50%;
-  width: auto;
+ height:50%;
+width:auto; 
 }
+
 .content {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-end;
+ display:flex;
+align-items:flex-end;
+flex-direction:column; 
 }
+
 .content label {
-  font-size: 10px;
-  display: flex;
-  gap: 5px;
+ gap:5px;
+display:flex;
+font-size:10px; 
 }
 
 .info {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  /*  max-width: 440px; */
-  gap: 10px;
+ gap:10px;
+display:flex;
+flex-direction:column;
+justify-content:center; 
 }
 
 .title {
-  font-weight: 700;
-  font-size: 16px;
-
-  color: #111111;
+ color:#111111;
+font-size:16px;
+font-weight:700; 
 }
 
 .description {
-  font-weight: 300;
-  font-size: 12px;
-  line-height: 150%;
-
-  color: #3f4e65;
+ color:#3f4e65;
+font-size:12px;
+font-weight:300;
+line-height:150%; 
 }
 
 .actions {
-  display: flex;
-  justify-content: center;
-  height: fit-content;
+ display:flex;
+height:fit-content;
+justify-content:center; 
 }
+
 .wrap {
-  display: flex;
-  align-items: center;
-  padding: 0 44px;
-  border-left: 1px dashed rgba(63, 78, 101, 0.3);
+ display:flex;
+padding:0 44px;
+align-items:center;
+border-left:1px dashed rgba(63, 78, 101, 0.3); 
 }
+
 .wrap:last-child {
-  padding-right: 0;
+ padding-right:0; 
+}
+
+.care {
+ gap:2px;
+display:flex;
+flex-wrap:wrap;
+align-items:flex-start; 
+}
+
+.care-item {
+ gap:2px;
+color:#000;
+display:flex;
+font-size:10px;
+cursor:pointer;
+align-items:center; 
+}
+
+.care-item span {
+ width:10px;
+height:10px;
+display:block;
+border-radius:50%;
+transition:all 0.3s;
+border:2px solid orange; 
+}
+
+.care-item:hover span {
+ transform:scale(2); 
+}
+
+.selected {
+ background-color:blue; 
 }

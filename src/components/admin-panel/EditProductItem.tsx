@@ -1,5 +1,5 @@
 import { FC, useState, useEffect } from "react";
-
+import { CARE } from "../../data/care";
 import Button from "../UI/Button";
 import classes from "./EditProductItem.module.css";
 import { IProductItem } from "../Product/IProductItem";
@@ -8,6 +8,7 @@ import ProductSize from "../Product/ProductSize";
 
 import { useAppDispatch, useAppSelector } from "../../hooks/hooks";
 import { removeProduct, replaceProduct } from "../../store/products-slice";
+import CartItem from "../Cart/CartItem";
 
 const EditProductItem: FC<{ item: IProductItem; id?: number }> = ({
   item,
@@ -23,6 +24,7 @@ const EditProductItem: FC<{ item: IProductItem; id?: number }> = ({
   const [size, setSize] = useState(item.size);
   const [title, setTitle] = useState(item.title);
   const [url, setUrl] = useState(item.url);
+  const [care, setCare] = useState<any>(item.care);
 
   const [init, setInit] = useState(false);
 
@@ -35,6 +37,7 @@ const EditProductItem: FC<{ item: IProductItem; id?: number }> = ({
     setSize(item.size);
     setTitle(item.title);
     setUrl(item.url);
+    setCare(item.care);
   }, [item]);
 
   useEffect(() => {
@@ -49,19 +52,45 @@ const EditProductItem: FC<{ item: IProductItem; id?: number }> = ({
       size,
       title,
       url,
+      care,
     };
     // console.log(replacement);
     dispatch(replaceProduct(replacement));
-  }, [barcode, brand, description, manufacturer, price, size, title, url]);
+  }, [
+    barcode,
+    brand,
+    description,
+    manufacturer,
+    price,
+    size,
+    title,
+    url,
+    care,
+  ]);
 
   useEffect(() => {
     setInit(true);
   }, []);
+
+  let careItemClasses;
+
+  const handleAddCare = (careItem: string) => {
+    careItem = careItem.toLocaleLowerCase();
+    for (let i = 0; i < item.care.length; i++) {
+      if (item.care[i] === careItem) {
+        setCare([...care].filter((i) => i !== careItem));
+        careItemClasses = classes.selected;
+        return;
+      }
+      setCare([...care, careItem]);
+      console.log(care);
+    }
+  };
+
   return (
     <div className={classes.item}>
       <div className={classes.image}>
         <img src={item.url} alt='' className={classes.img} />
-
         <div className={classes.actions}>
           <Button
             variant='remove'
@@ -72,7 +101,6 @@ const EditProductItem: FC<{ item: IProductItem; id?: number }> = ({
           />
         </div>
       </div>
-
       <div className={classes.content}>
         <label>
           Штрихкод:
@@ -138,6 +166,22 @@ const EditProductItem: FC<{ item: IProductItem; id?: number }> = ({
             onChange={(e) => setUrl(e.target.value)}
           />
         </label>
+        <div className={classes.care}>
+          {CARE.map((i) => (
+            <p
+              className={classes["care-item"]}
+              onClick={handleAddCare.bind(null, i.heading)}>
+              {i.heading}
+              <span
+                className={
+                  care.includes(i.heading.toLocaleLowerCase())
+                    ? classes.selected
+                    : ""
+                }
+              />
+            </p>
+          ))}
+        </div>
       </div>
     </div>
   );
