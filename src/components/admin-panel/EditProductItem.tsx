@@ -1,14 +1,11 @@
-import { FC, useState, useEffect } from "react";
+import { FC, useState, useEffect, useRef } from "react";
 import { CARE } from "../../data/care";
 import Button from "../UI/Button";
 import classes from "./EditProductItem.module.css";
 import { IProductItem } from "../Product/IProductItem";
 
-import ProductSize from "../Product/ProductSize";
-
 import { useAppDispatch, useAppSelector } from "../../hooks/hooks";
 import { removeProduct, replaceProduct } from "../../store/products-slice";
-import CartItem from "../Cart/CartItem";
 
 const EditProductItem: FC<{ item: IProductItem; id?: number }> = ({
   item,
@@ -26,6 +23,8 @@ const EditProductItem: FC<{ item: IProductItem; id?: number }> = ({
   const [url, setUrl] = useState(item.url);
   const [care, setCare] = useState<any>(item.care);
 
+  const [sizeType, setSizeType] = useState<any>(item.sizeType);
+
   const [init, setInit] = useState(false);
 
   useEffect(() => {
@@ -38,6 +37,7 @@ const EditProductItem: FC<{ item: IProductItem; id?: number }> = ({
     setTitle(item.title);
     setUrl(item.url);
     setCare(item.care);
+    setSizeType(item.sizeType);
   }, [item]);
 
   useEffect(() => {
@@ -50,6 +50,7 @@ const EditProductItem: FC<{ item: IProductItem; id?: number }> = ({
       manufacturer,
       price,
       size,
+      sizeType,
       title,
       url,
       care,
@@ -63,6 +64,7 @@ const EditProductItem: FC<{ item: IProductItem; id?: number }> = ({
     manufacturer,
     price,
     size,
+    sizeType,
     title,
     url,
     care,
@@ -141,6 +143,15 @@ const EditProductItem: FC<{ item: IProductItem; id?: number }> = ({
             value={price}
             onChange={(e) => setPrice(+e.target.value)}
           />
+        </label>
+        <label>
+          Тип размера:
+          <select
+            onChange={(e) => setSizeType(e.target.value)}
+            value={sizeType}>
+            <option value='weight'>Вес</option>
+            <option value='value'>Объем</option>
+          </select>
         </label>
         <label>
           Размер:
