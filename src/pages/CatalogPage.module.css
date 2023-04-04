@@ -1,4 +1,3 @@
-
 .header {
   display: flex;
   flex-direction: column;
@@ -8,6 +7,7 @@
 }
 .top {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-between;
   width: 100%;
 }
@@ -19,11 +19,19 @@
 
   color: #111111;
 }
-
-
+@media screen and (max-width: 481px) {
+  .top h2 {
+    font-size: 20px;
+  }
+}
 .bottom {
   display: flex;
   gap: 100px;
+}
+@media screen and (max-width: 481px) {
+  .bottom {
+    flex-wrap: wrap;
+  }
 }
 
 .products {
@@ -33,4 +41,3 @@
   align-items: center;
   gap: 50px;
 }
-

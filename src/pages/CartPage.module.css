@@ -10,5 +10,11 @@
 .checkout {
   display: flex;
   justify-content: space-between;
-  padding: 50px 0 ;
+  padding: 50px 0;
+}
+
+@media screen and (max-width: 481px) {
+  .heading {
+    font-size: 20px;
+  }
 }

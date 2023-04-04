@@ -9,6 +9,11 @@
 
   color: #3f4e65;
 }
+@media screen and (max-width: 481px) {
+  .care {
+    display: none;
+  }
+}
 .care li {
   display: flex;
   justify-content: center;

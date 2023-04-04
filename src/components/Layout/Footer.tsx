@@ -66,10 +66,10 @@ const Footer: FC = () => {
               </li>
               <li className={classes.images}>
                 <a href='#'>
-                  <img src='/wsp-img.png' alt='' width={39} />
+                  <img src='./wsp-img.png' alt='' width={39} />
                 </a>
                 <a href='#'>
-                  <img src='/tlg-img.png' alt='' width={39} />
+                  <img src='./tlg-img.png' alt='' width={39} />
                 </a>
               </li>
             </ul>
@@ -91,10 +91,10 @@ const Footer: FC = () => {
               </li>
               <li className={classes.images}>
                 <a href='#'>
-                  <img src='/visa-img.png' alt='' width={61} />
+                  <img src='./visa-img.png' alt='' width={61} />
                 </a>
                 <a href='#'>
-                  <img src='/mcard-img.png' alt='' width={61} />
+                  <img src='./mcard-img.png' alt='' width={61} />
                 </a>
               </li>
             </ul>

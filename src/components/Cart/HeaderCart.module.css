@@ -33,6 +33,17 @@
   display: flex;
   flex-direction: column;
 }
+@media screen and (max-width: 481px) {
+  .icon.badge {
+    left: 18px;
+  }
+  .icon img {
+    height: 25px;
+  }
+  .texts {
+    display: none;
+  }
+}
 
 .title {
   font-weight: 300;
