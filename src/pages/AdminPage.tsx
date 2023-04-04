@@ -62,6 +62,7 @@ export const AdminPage: FC = () => {
       description: descriptionRef.current?.value,
       price: priceRef.current?.value ? +priceRef.current?.value : null,
       care: care,
+      id: Math.random().toString(16),
     };
     return product;
   };
@@ -120,7 +121,7 @@ export const AdminPage: FC = () => {
       <HorisontalGap gap='50px' />
       <div className={classes.wrap}>
         {originProducts.map((prod) => (
-          <EditProductItem item={prod} />
+          <EditProductItem item={prod} id={prod.id}/>
         ))}
       </div>
       <HorisontalGap gap='50px' />

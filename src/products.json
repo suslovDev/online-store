@@ -1,5 +1,6 @@
 [
   {
+    "id": 1,
     "url": "./prod_1.png",
     "title": "A-One",
     "sizeType": "weight",
@@ -12,6 +13,7 @@
     "care": ["уход за телом"]
   },
   {
+    "id": 2,
     "url": "./prod_2.png",
     "title": "B-Two",
     "sizeType": "weight",
@@ -24,6 +26,7 @@
     "care": ["уход за руками"]
   },
   {
+    "id": 3,
     "url": "./prod_1.png",
     "title": "E-Three",
     "sizeType": "value",
@@ -36,6 +39,7 @@
     "care": ["уход за телом", "уход за руками"]
   },
   {
+    "id": 4,
     "url": "./prod_3.png",
     "title": "Four",
     "sizeType": "weight",
@@ -48,6 +52,7 @@
     "care": ["уход за телом"]
   },
   {
+    "id": 5,
     "url": "./prod_3.png",
     "title": "Five",
     "sizeType": "weight",
@@ -60,6 +65,7 @@
     "care": ["уход за руками"]
   },
   {
+    "id": 6,
     "url": "./prod_3.png",
     "title": "Six",
     "sizeType": "weight",
@@ -72,6 +78,7 @@
     "care": ["уход за руками"]
   },
   {
+    "id": 7,
     "url": "./prod_3.png",
     "title": "Seven",
     "sizeType": "weight",
@@ -84,6 +91,7 @@
     "care": ["уход за лицом"]
   },
   {
+    "id": 8,
     "url": "./prod_3.png",
     "title": "Eight",
     "sizeType": "weight",
@@ -96,6 +104,7 @@
     "care": ["уход за лицом"]
   },
   {
+    "id": 9,
     "url": "./prod_3.png",
     "title": "Nine",
     "sizeType": "weight",
@@ -108,6 +117,7 @@
     "care": ["уход за телом", "уход за лицом", "уход за руками"]
   },
   {
+    "id": 10,
     "url": "./prod_3.png",
     "title": "Ten",
     "sizeType": "value",
@@ -120,6 +130,7 @@
     "care": ["уход за ногами"]
   },
   {
+    "id": 11,
     "url": "./prod_3.png",
     "title": "Eleven",
     "sizeType": "weight",
@@ -132,6 +143,7 @@
     "care": ["уход за телом"]
   },
   {
+    "id": 12,
     "url": "./prod_3.png",
     "title": "Twelve",
     "sizeType": "weight",
@@ -144,6 +156,7 @@
     "care": ["уход за телом"]
   },
   {
+    "id": 13,
     "url": "./prod_3.png",
     "title": "Thirteen",
     "sizeType": "weight",
@@ -156,6 +169,7 @@
     "care": ["уход за телом"]
   },
   {
+    "id": 14,
     "url": "./prod_3.png",
     "title": "Fourteen",
     "sizeType": "weight",
@@ -168,6 +182,7 @@
     "care": ["уход за волосами"]
   },
   {
+    "id": 15,
     "url": "./prod_3.png",
     "title": "Fifteen",
     "sizeType": "weight",
@@ -180,6 +195,7 @@
     "care": ["уход за ногами"]
   },
   {
+    "id": 16,
     "url": "./prod_3.png",
     "title": "Sixteen",
     "sizeType": "weight",
@@ -192,6 +208,7 @@
     "care": ["уход за телом"]
   },
   {
+    "id": 17,
     "url": "./prod_3.png",
     "title": "Seventeen",
     "sizeType": "weight",
@@ -204,6 +221,7 @@
     "care": ["уход за ногами", "уход за телом"]
   },
   {
+    "id": 18,
     "url": "./prod_3.png",
     "title": "Eighteen",
     "sizeType": "weight",

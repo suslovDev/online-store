@@ -39,8 +39,8 @@ const productsSlice = createSlice({
         addProduct(state, action) {
             state.originProducts.push(action.payload)
         },
-        replaceProduct(state, action: PayloadAction<any>) {
-            state.originProducts = state.originProducts.map(prod => prod.barcode === action.payload.barcode ? action.payload : prod);
+        replaceProduct(state, action) {
+            state.originProducts = state.originProducts.map(prod => prod.id === action.payload.id ? action.payload.replacement : prod);
         },
         removeProduct(state, action) {
             state.originProducts = state.originProducts.filter(prod => prod.barcode !== action.payload);

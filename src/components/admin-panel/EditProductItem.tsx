@@ -55,8 +55,8 @@ const EditProductItem: FC<{ item: IProductItem; id?: number }> = ({
       url,
       care,
     };
-    // console.log(replacement);
-    dispatch(replaceProduct(replacement));
+    console.log(replacement);
+    dispatch(replaceProduct({ replacement, id }));
   }, [
     barcode,
     brand,
@@ -107,7 +107,7 @@ const EditProductItem: FC<{ item: IProductItem; id?: number }> = ({
         <label>
           Штрихкод:
           <input
-            type='text'
+            type='number'
             value={barcode}
             onChange={(e) => setBarcode(e.target.value)}
           />

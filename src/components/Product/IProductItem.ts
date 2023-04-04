@@ -1,5 +1,6 @@
 type sizeType = "weight" | "value";
 export interface IProductItem {
+    id: number;
     barcode: string | number;
     brand: string;
     description: string;
