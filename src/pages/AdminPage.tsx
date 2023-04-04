@@ -7,6 +7,7 @@ import Crumbs from "../components/Layout/Crumbs";
 import { useAppSelector, useAppDispatch } from "../hooks/hooks";
 import { addProduct } from "../store/products-slice";
 import EditProductItem from "../components/admin-panel/EditProductItem";
+import Button from "../components/UI/Button";
 
 export const AdminPage: FC = () => {
   const dispatch = useAppDispatch();
@@ -114,14 +115,16 @@ export const AdminPage: FC = () => {
             </label>
           ))}
         </div>
-        <button type='submit'>Добавить товар</button>
+        <Button type='submit' variant='standart'>
+          Добавить товар
+        </Button>
       </form>
       <HorisontalGap gap='50px' />
       <h2 className={classes.heading}>Редактирование товаров:</h2>
       <HorisontalGap gap='50px' />
       <div className={classes.wrap}>
         {originProducts.map((prod) => (
-          <EditProductItem item={prod} id={prod.id}/>
+          <EditProductItem item={prod} id={prod.id} />
         ))}
       </div>
       <HorisontalGap gap='50px' />
