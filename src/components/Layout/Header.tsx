@@ -90,11 +90,11 @@ const Header = () => {
         </div>
       </header>
 
-      <Container>
-        <div className={classes.mobile}>
+      <div className={classes.mobile}>
+        <Container>
           <div className={classes.top}>
             <div>
-              <button className={classes.menu}>
+              <button className={classes['menu-mobile']}>
                 <img src='./burger-img.png' alt='' width={12} />
               </button>
             </div>
@@ -115,8 +115,8 @@ const Header = () => {
               Поиск
             </div>
           </div>
-        </div>
-      </Container>
+        </Container>
+      </div>
     </>
   );
 };
