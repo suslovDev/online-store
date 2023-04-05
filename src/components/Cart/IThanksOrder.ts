@@ -1,3 +1,3 @@
 export interface IThankOrder {
-    onClick?: () => void; 
+    onClick?: React.MouseEventHandler<HTMLButtonElement> | undefined;
 }
