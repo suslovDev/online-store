@@ -1,6 +1,6 @@
+import { FC } from "react";
 import classes from "./Price.module.css";
 import { IPrice } from "./IPrice";
-import { FC } from "react";
 
 const currencyMap = new Map([
   ["KZT", "₸"],
