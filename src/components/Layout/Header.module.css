@@ -104,16 +104,6 @@
   display: none;
 }
 
-@media screen and (max-width: 480px) {
-  .mobile {
-    display: flex;
-    flex-direction: column;
-    gap: 10px;
-  }
-  .header {
-    display: none;
-  }
-}
 .top {
   display: flex;
   justify-content: space-between;
@@ -151,4 +141,15 @@
   border-radius: 50%;
   display: flex;
   justify-content: center;
+}
+
+@media screen and (max-width: 480px) {
+  .mobile {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+  .header {
+    display: none;
+  }
 }

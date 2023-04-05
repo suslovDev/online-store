@@ -19,6 +19,15 @@
 
   color: #111111;
 }
+
+.products {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  gap: 50px;
+}
+
 @media screen and (max-width: 481px) {
   .top h2 {
     font-size: 20px;
@@ -32,12 +41,4 @@
   .bottom {
     flex-wrap: wrap;
   }
-}
-
-.products {
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  align-items: center;
-  gap: 50px;
 }

@@ -9,11 +9,7 @@
 
   color: #3f4e65;
 }
-@media screen and (max-width: 481px) {
-  .care {
-    display: none;
-  }
-}
+
 .care li {
   display: flex;
   justify-content: center;
@@ -33,4 +29,10 @@
     rgba(255, 198, 80, 0.3) 0%,
     rgba(254, 202, 110, 0.3) 97.25%
   ) !important;
+}
+
+@media screen and (max-width: 481px) {
+  .care {
+    display: none;
+  }
 }
