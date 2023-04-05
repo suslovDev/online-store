@@ -1,33 +1,36 @@
 .button {
-  display: flex;
-  align-items: center;
-  gap: 28px;
-  width: fit-content;
-  position: relative;
-  height: fit-content;
-  cursor: pointer;
+ gap:28px;
+display:flex;
+cursor:pointer;
+width:fit-content;
+position:relative;
+align-items:center;
+height:fit-content; 
 }
 
 .badge {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 24px;
-  height: 24px;
-  border: 2px solid #fff;
-  border-radius: 50%;
-  background-color: #ffc85e;
-  position: absolute;
-  top: -8px;
-  left: 28px;
-  color: #fff;
-  font-weight: 700;
-  font-size: 14px;
+ top:-8px;
+left:28px;
+width:24px;
+color:#fff;
+height:24px;
+display:flex;
+font-size:14px;
+font-weight:700;
+border-radius:50%;
+position:absolute;
+align-items:center;
+border:2px solid #fff;
+justify-content:center;
+background-color:#ffc85e; 
 }
+
 .icon img {
-  width: auto;
-  height: 28px;
+ width:auto;
+height:28px; 
 }
+
+
 
 .texts {
   display: flex;
@@ -35,10 +38,10 @@
 }
 
 .title {
-  font-weight: 300;
-  font-size: 12px;
-  line-height: 150%;
-  color: #3f4e65;
+ color:#3f4e65;
+font-size:12px;
+font-weight:300;
+line-height:150%; 
 }
 
 .beat {

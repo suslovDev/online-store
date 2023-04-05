@@ -1,13 +1,16 @@
-import classes from "./HeaderCart.module.css";
-import { IHeaderCart } from "./IHeaderCart";
 import { FC, useEffect, useState } from "react";
-import Price from "../UI/Price";
 import { useNavigate } from "react-router-dom";
+import { IHeaderCart } from "./IHeaderCart";
+import classes from "./HeaderCart.module.css";
+import Price from "../UI/Price";
 
 const HeaderCart: FC<IHeaderCart> = ({ items, total }) => {
-  const navigate = useNavigate();
   const [isHighlighted, setIsHighlighted] = useState(false);
+
   const badgeClasses = `${classes.badge} ${isHighlighted ? classes.beat : ""}`;
+
+  const navigate = useNavigate();
+
   useEffect(() => {
     if (items.length === 0) return;
     setIsHighlighted(true);
@@ -18,6 +21,7 @@ const HeaderCart: FC<IHeaderCart> = ({ items, total }) => {
       clearTimeout(timer);
     };
   }, [items]);
+
   return (
     <button
       className={classes.button}

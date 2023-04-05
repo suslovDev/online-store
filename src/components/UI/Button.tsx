@@ -1,6 +1,6 @@
 import { FC } from "react";
-import { IButton } from "./IButton";
 import classes from "./Button.module.css";
+import { IButton } from "./IButton";
 
 const Button: FC<IButton> = ({ variant, type, onClick, children }) => {
   return (

@@ -1,4 +1,6 @@
+import { IProductItem } from "../Product/IProductItem";
+
 export interface IHeaderCart {
-    items: Array<any>;//тут поправить типы
+    items: IProductItem[];
     total: number;
 }

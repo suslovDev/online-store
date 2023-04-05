@@ -1,56 +1,58 @@
 .item {
-  display: flex;
-  border-top: 1px dashed rgba(63, 78, 101, 0.3);
-  border-bottom: 1px dashed rgba(63, 78, 101, 0.3);
-  padding: 50px 0;
-  height: 290px;
+ display:flex;
+height:290px;
+padding:50px 0;
+border-top:1px dashed rgba(63, 78, 101, 0.3);
+border-bottom:1px dashed rgba(63, 78, 101, 0.3); 
 }
 
+
 .image {
-  width: 300px;
-  display: flex;
-  justify-content: center;
+ width:300px;
+display:flex;
+justify-content:center; 
 }
+
 .content {
-  display: flex;
-  width: 100%;
-  justify-content: space-between;
-  align-items: center;
+ width:100%;
+display:flex;
+align-items:center;
+justify-content:space-between; 
 }
+
 
 .image img {
   height: 100%;
 }
-
 .info {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  max-width: 440px;
-  gap: 10px;
+ gap:10px;
+display:flex;
+max-width:440px;
+flex-direction:column;
+justify-content:center; 
 }
 
 .title {
-  font-weight: 700;
-  font-size: 30px;
-  line-height: 36px;
-
-  color: #111111;
+ color:#111111;
+font-size:30px;
+font-weight:700;
+line-height:36px; 
 }
 
-.description {
-  font-weight: 300;
-  font-size: 12px;
-  line-height: 150%;
 
-  color: #3f4e65;
+.description {
+ color:#3f4e65;
+font-size:12px;
+font-weight:300;
+line-height:150%; 
 }
 
 .actions {
-  display: flex;
-  justify-content: center;
-  height: fit-content;
+ display:flex;
+height:fit-content;
+justify-content:center; 
 }
+
 .wrap {
   display: flex;
   align-items: center;
