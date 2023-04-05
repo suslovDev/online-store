@@ -17,7 +17,7 @@ const CartItem: FC<{ item: IProductItem }> = ({ item }) => {
 
   const dispatch = useAppDispatch();
 
-  let currentCartItem = cart.find((i) => i.barcode == item.barcode);
+  let currentCartItem = cart.find((i) => i.barcode === item.barcode);
 
   let initialAmount = currentCartItem ? currentCartItem.quantity : 1;
 

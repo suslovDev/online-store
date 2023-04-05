@@ -5,12 +5,15 @@ import { IAmountControl } from "./IAmountControl";
 const AmountControl: FC<IAmountControl> = ({ onPlus, onMinus, startWith }) => {
   const [amount, setAmount] = useState<number>(startWith);
 
-
-  const handlePlus = (): void => {
+  const handlePlus:
+    | React.MouseEventHandler<HTMLButtonElement>
+    | undefined = () => {
     setAmount((prev) => (prev += 1));
     onPlus();
   };
-  const handleMinus = (): void => {
+  const handleMinus:
+    | React.MouseEventHandler<HTMLButtonElement>
+    | undefined = () => {
     if (amount < 1) {
       setAmount(0);
       return;
