@@ -1,20 +1,27 @@
 import classes from "./Checkboxes.module.css";
 import { FC, useState, useEffect } from "react";
 import { useAppDispatch, useAppSelector } from "../../hooks/hooks";
-import { filterByManufact } from "../../store/products-slice";
+import { filterProducts, setFilter } from "../../store/products-slice";
 import { TItem, getPair } from "../../helpers/get-pair";
+import Item from "./Item";
 
 const Checkboxes: FC = () => {
   const dispatch = useAppDispatch();
 
-  const { products } = useAppSelector((state) => state.products.filter);
-  //const { originProducts } = useAppSelector((state) => state.products);
+  const { products, originProducts } = useAppSelector(
+    (state) => state.products
+  );
   const { manufacturer } = useAppSelector((state) => state.products.filter);
+  const filter = useAppSelector((state) => state.products.filter);
   const [showAll, setShowAll] = useState(false);
   const [inputValue, setInputValue] = useState("");
   const [show, setShow] = useState<TItem[]>();
 
-  let listAll = show ? show : getPair(products);
+  useEffect(() => {
+    dispatch(filterProducts(filter));
+  }, [filter]);
+
+  let listAll = getPair(products);
 
   const listShow = listAll.slice(0, 4);
 
@@ -27,33 +34,37 @@ const Checkboxes: FC = () => {
     return false;
   };
 
-  const handleCheck = (manufact: string) => {
-    dispatch(filterByManufact(manufact));
-  };
-
-  let list: TItem[] = [];
-/*   const handleClick = () => {
-    for (let i = 0; i < listAll.length; i++) {
-      if (listAll[i].manufacturer.includes(inputValue)) {
-        list.push(listAll[i]);
-      }
+  const handleCheck = (manufact: any) => {
+    if (manufacturer.includes(manufact)) {
+      console.log("уже есть");
+      dispatch(
+        setFilter({
+          ...filter,
+          manufacturer: manufacturer.filter((m) => m !== manufact),
+        })
+      );
+    } else {
+      console.log("еще нет");
+      dispatch(
+        setFilter({ ...filter, manufacturer: [...manufacturer, manufact] })
+      );
     }
-    setShow([...list]);
-  }; */
+  };
 
   return (
     <div>
       <div className={classes.chkboxes}>
         {showList.map((item) => {
           return (
-            <label key={item.manufacturer}>
+            <Item item={item} onClick={handleCheck} key={item.manufacturer} />
+            /*       <label key={item.manufacturer}>
               <input
                 checked={predicate(manufacturer, item.manufacturer)}
                 type='checkbox'
                 onClick={handleCheck.bind(null, item.manufacturer)}
               />
               {`${item.manufacturer}(${item.count})`}
-            </label>
+            </label> */
           );
         })}
       </div>

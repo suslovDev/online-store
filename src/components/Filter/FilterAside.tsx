@@ -1,5 +1,5 @@
 import classes from "./FilterAside.module.css";
-import { FC } from "react";
+import { FC, useEffect } from "react";
 import SearchForm from "../UI/SearchForm";
 import CareList from "./CareList";
 import { CARE } from "../../data/care";
@@ -8,21 +8,22 @@ import { setCurrent } from "../../store/ui-slice";
 
 import Checkboxes from "./Checkboxes";
 import PriceFilter from "./PriceFilter";
-import { filterByCare } from "../../store/products-slice";
+import { filterProducts, setFilter } from "../../store/products-slice";
 
 const FilterAside: FC = () => {
   const selectedCare = useAppSelector((state) => state.ui.currentCare);
+  const filter = useAppSelector((state) => state.products.filter);
 
   const dispatch = useAppDispatch();
+
+  useEffect(() => {
+    dispatch(filterProducts(filter));
+  }, [filter]);
 
   const handleSelect = (id: number) => {
     const careType = CARE.find((item) => item.id === id)?.heading.toLowerCase();
     if (!careType) return;
-    dispatch(
-      filterByCare({
-        value: careType,
-      })
-    );
+    dispatch(setFilter({ ...filter, care: careType }));
     dispatch(setCurrent(id));
   };
 
@@ -34,7 +35,7 @@ const FilterAside: FC = () => {
         <h4>Производитель</h4>
         <SearchForm
           placeholder='Поиск...'
-          /* onSubmit={(val) => dispatch(filterByManufact(val))} */
+          onSubmit={(val) => dispatch(setFilter({ ...filter, substr: val }))}
         />
         <Checkboxes />
         {CARE.map((item) => {

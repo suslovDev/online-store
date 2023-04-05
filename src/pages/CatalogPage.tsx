@@ -1,5 +1,5 @@
 import classes from "./CatalogPage.module.css";
-import { FC, useState } from "react";
+import { FC, useEffect, useState } from "react";
 import { useAppSelector, useAppDispatch } from "../hooks/hooks";
 import ProductList from "../components/Products/ProductList";
 import Crumbs from "../components/Layout/Crumbs";
@@ -11,7 +11,7 @@ import Pagination from "../components/UI/Pagination";
 import { CARE } from "../data/care";
 import { setCurrent } from "../store/ui-slice";
 import CareFilterTop from "../components/Filter/CareFilterTop";
-import { filterByCare } from "../store/products-slice";
+import { filterProducts, setFilter } from "../store/products-slice";
 
 const params = [
   { url: "", name: "Главная" },
@@ -21,9 +21,13 @@ const params = [
 export const CatalogPage: FC = () => {
   const dispatch = useAppDispatch();
   const products = useAppSelector((state) => state.products.products);
+  const filter = useAppSelector((state) => state.products.filter);
   const selectedCare = useAppSelector((state) => state.ui.currentCare);
-
   const [displayProducts, setDisplayProducts] = useState([]);
+
+  useEffect(() => {
+    dispatch(filterProducts(filter));
+  }, [filter]);
 
   const handleSetSlice = (prods: []) => {
     setDisplayProducts(prods);
@@ -32,18 +36,14 @@ export const CatalogPage: FC = () => {
   const handleSelect = (id: number) => {
     const careType = CARE.find((item) => item.id === id)?.heading.toLowerCase();
     if (!careType) return;
-    dispatch(
-      filterByCare({
-        value: careType,
-      })
-    );
+    dispatch(setFilter({ ...filter, care: careType }));
     dispatch(setCurrent(id));
   };
 
   return (
     <Container>
       <Crumbs params={params} />
-    
+
       <div className={classes.header}>
         <div className={classes.top}>
           <h2 className={classes.heading}>Косметика и гигиена</h2>
