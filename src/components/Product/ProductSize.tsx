@@ -1,6 +1,6 @@
+import { FC } from "react";
 import classes from "./ProductSize.module.css";
 import { IProductSize } from "./IProductSize";
-import { FC } from "react";
 
 const ProductSize: FC<IProductSize> = ({ type, value }) => {
   const typeMap = new Map([
