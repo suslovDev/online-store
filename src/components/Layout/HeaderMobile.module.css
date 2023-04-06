@@ -1,0 +1,30 @@
+.top {
+ display:flex;
+align-items:center;
+justify-content:space-between; 
+}
+
+.bottom {
+ width:100%;
+display:flex;
+border-top:1px solid rgba(63, 78, 101, 0.25);
+border-bottom:1px solid rgba(63, 78, 101, 0.25); 
+}
+
+.bottom>div {
+ gap:6px;
+width:50%;
+display:flex;
+color:#3f4e65;
+font-size:12px;
+padding:13px 0;
+font-weight:600;
+line-height:15px;
+text-align:center;
+align-items:center;
+justify-content:center; 
+}
+
+.bottom div:nth-child(2) {
+ border-left:2px dashed rgba(0, 0, 0, 5%); 
+}

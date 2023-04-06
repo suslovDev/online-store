@@ -1,13 +1,15 @@
-import Button from "../UI/Button";
-import Container from "./Container";
+import { FC } from "react";
 import classes from "./Header.module.css";
+import HeaderMobile from "./HeaderMobile";
 import HeaderCart from "../Cart/HeaderCart";
 import SearchForm from "../UI/SearchForm";
+import Container from "./Container";
+import Button from "../UI/Button";
 import { useAppSelector } from "../../hooks/hooks";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 
-const Header = () => {
+const Header: FC = () => {
   const { cart, total } = useAppSelector((state) => state.cart);
   const navigate = useNavigate();
   const totalvalue = +total.toFixed(2);
@@ -89,33 +91,8 @@ const Header = () => {
           </Container>
         </div>
       </header>
-
       <div className={classes.mobile}>
-        <Container>
-          <div className={classes.top}>
-            <div>
-              <button className={classes['menu-mobile']}>
-                <img src='./burger-img.png' alt='' width={12} />
-              </button>
-            </div>
-            <div>
-              <img src='./header_logo-img.png' alt='' width={97} />
-            </div>
-            <div>
-              <HeaderCart items={cart} total={totalvalue} />
-            </div>
-          </div>
-          <div className={classes.bottom}>
-            <div>
-              <img src='./cat-mobile-img.png' alt='' />
-              Каталог
-            </div>
-            <div>
-              <img src='./search=mobile-img' alt='' />
-              Поиск
-            </div>
-          </div>
-        </Container>
+        <HeaderMobile cart={cart} total={totalvalue} />
       </div>
     </>
   );
