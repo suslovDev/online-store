@@ -1,23 +1,24 @@
 .heading {
-  font-weight: 500;
-  font-size: 40px;
-  line-height: 120%;
-  text-transform: uppercase;
-
-  color: #111111;
+ color:#111111;
+font-size:40px;
+font-weight:500;
+line-height:120%;
+text-transform:uppercase; 
 }
 
 form {
-  display: flex;
-  flex-direction: column;
+ display:flex;
+flex-direction:column; 
 }
+
 .care {
-  display: flex;
-  flex-wrap: wrap;
+ display:flex;
+flex-wrap:wrap; 
 }
+
 .wrap {
-    display: flex;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-    row-gap: 20px;
+ display:flex;
+row-gap:20px;
+flex-wrap:wrap;
+justify-content:space-evenly; 
 }

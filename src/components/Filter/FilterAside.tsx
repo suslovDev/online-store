@@ -10,7 +10,7 @@ import Checkboxes from "./Checkboxes";
 import PriceFilter from "./PriceFilter";
 import { filterProducts, setFilter } from "../../store/products-slice";
 
-import { useFilter } from "./use-filter";
+import { useFilter } from "../../hooks/use-filter";
 
 const FilterAside: FC = () => {
   const selectedCare = useAppSelector((state) => state.ui.currentCare);

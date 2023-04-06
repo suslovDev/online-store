@@ -1,7 +1,7 @@
 import { FC, useState } from "react";
 import classes from "./ProductSelf.module.css";
 import { IProductItem } from "./IProductItem";
-import { useAppDispatch, useAppSelector } from "../../hooks/hooks";
+import { useAppDispatch } from "../../hooks/hooks";
 import { plusToCart } from "../../store/cart-slice";
 import AmountControl from "../UI/AmountControl";
 import Accordeon from "../UI/Accordeon";

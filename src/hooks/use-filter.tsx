@@ -1,6 +1,6 @@
 import { useEffect } from "react";
-import { useAppDispatch, useAppSelector } from "../../hooks/hooks";
-import { filterProducts, setFilter } from "../../store/products-slice";
+import { useAppDispatch, useAppSelector } from "./hooks";
+import { filterProducts, setFilter } from "../store/products-slice";
 
 export const useFilter = () => {
   const filter = useAppSelector((state) => state.products.filter);

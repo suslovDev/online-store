@@ -8,38 +8,31 @@ import { useAppSelector, useAppDispatch } from "../hooks/hooks";
 import { addProduct } from "../store/products-slice";
 import EditProductItem from "../components/admin-panel/EditProductItem";
 import Button from "../components/UI/Button";
+import { useInit } from "../hooks/use-init";
+
+const params = [
+  { url: "", name: "Главная" },
+  { url: "admin", name: "Админка" },
+];
+
+const careList = [
+  "Уход за телом",
+  "Уход за руками",
+  "Уход за ногами",
+  " Уход за лицом",
+  "Уход за волосами",
+  "Средства для загара",
+  "Средства для бритья",
+  "Подарочные наборы",
+  "Гигиеническая продукция",
+  "Гигиена полости рта",
+  "Бумажная продукция",
+];
 
 export const AdminPage: FC = () => {
-  const dispatch = useAppDispatch();
-  const { originProducts } = useAppSelector((state) => state.products);
-  console.log("ОРИГИНАЛ:", originProducts);
   const [care, setCare] = useState<any>([]);
-  const [init, setInit] = useState(false);
-  if (originProducts.length && init) localStorage.removeItem("products");
-
-  useEffect(() => {
-    if (init) return;
-    setInit(true);
-  }, [originProducts]);
-
-  const params = [
-    { url: "", name: "Главная" },
-    { url: "admin", name: "Админка" },
-  ];
-
-  const careList = [
-    "Уход за телом",
-    "Уход за руками",
-    "Уход за ногами",
-    " Уход за лицом",
-    "Уход за волосами",
-    "Средства для загара",
-    "Средства для бритья",
-    "Подарочные наборы",
-    "Гигиеническая продукция",
-    "Гигиена полости рта",
-    "Бумажная продукция",
-  ];
+  const products = useInit();
+  const dispatch = useAppDispatch();
 
   const urlRef = useRef<HTMLInputElement | null>(null);
   const titleRef = useRef<HTMLInputElement | null>(null);
@@ -67,6 +60,7 @@ export const AdminPage: FC = () => {
     };
     return product;
   };
+
   const handleSubmit: React.FormEventHandler<HTMLFormElement> = (e) => {
     e.preventDefault();
     let product = createProduct();
@@ -123,7 +117,7 @@ export const AdminPage: FC = () => {
       <h2 className={classes.heading}>Редактирование товаров:</h2>
       <HorisontalGap gap='50px' />
       <div className={classes.wrap}>
-        {originProducts.map((prod) => (
+        {products.map((prod) => (
           <EditProductItem item={prod} id={prod.id} />
         ))}
       </div>

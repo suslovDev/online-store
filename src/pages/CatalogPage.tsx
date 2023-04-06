@@ -1,17 +1,17 @@
+import { FC, useState } from "react";
 import classes from "./CatalogPage.module.css";
-import { FC, useEffect, useState } from "react";
 import { useAppSelector, useAppDispatch } from "../hooks/hooks";
-import ProductList from "../components/Products/ProductList";
-import Crumbs from "../components/Layout/Crumbs";
-import Container from "../components/Layout/Container";
-import SortCatalog from "../components/Sort/SortCatalog";
-import HorisontalGap from "../components/Layout/HorisontalGap";
-import FilterAside from "../components/Filter/FilterAside";
-import Pagination from "../components/UI/Pagination";
-import { CARE } from "../data/care";
+import { useFilter } from "../hooks/use-filter";
 import { setCurrent } from "../store/ui-slice";
+import { CARE } from "../data/care";
 import CareFilterTop from "../components/Filter/CareFilterTop";
-import { filterProducts, setFilter } from "../store/products-slice";
+import Container from "../components/Layout/Container";
+import Crumbs from "../components/Layout/Crumbs";
+import FilterAside from "../components/Filter/FilterAside";
+import HorisontalGap from "../components/Layout/HorisontalGap";
+import Pagination from "../components/UI/Pagination";
+import ProductList from "../components/Products/ProductList";
+import SortCatalog from "../components/Sort/SortCatalog";
 
 const params = [
   { url: "", name: "Главная" },
@@ -20,14 +20,10 @@ const params = [
 
 export const CatalogPage: FC = () => {
   const dispatch = useAppDispatch();
+  const filterByCare = useFilter();
   const products = useAppSelector((state) => state.products.products);
-  const filter = useAppSelector((state) => state.products.filter);
   const selectedCare = useAppSelector((state) => state.ui.currentCare);
   const [displayProducts, setDisplayProducts] = useState([]);
-
-  useEffect(() => {
-    dispatch(filterProducts(filter));
-  }, [filter]);
 
   const handleSetSlice = (prods: []) => {
     setDisplayProducts(prods);
@@ -36,7 +32,7 @@ export const CatalogPage: FC = () => {
   const handleSelect = (id: number) => {
     const careType = CARE.find((item) => item.id === id)?.heading.toLowerCase();
     if (!careType) return;
-    dispatch(setFilter({ ...filter, care: careType }));
+    filterByCare({ care: careType });
     dispatch(setCurrent(id));
   };
 

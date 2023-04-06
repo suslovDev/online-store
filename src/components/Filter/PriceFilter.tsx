@@ -1,6 +1,6 @@
 import { FC, useState, useEffect } from "react";
 import classes from "./PriceFilter.module.css";
-import { useFilter } from "./use-filter";
+import { useFilter } from "../../hooks/use-filter";
 
 const PriceFilter: FC = () => {
   const filterByPrice = useFilter();
