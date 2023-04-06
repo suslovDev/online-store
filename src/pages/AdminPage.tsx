@@ -1,13 +1,13 @@
 import { FC, useRef, useState } from "react";
 import classes from "./AdminPage.module.css";
-import Container from "../components/Layout/Container";
+import Container from "../components/Layout/Container/Container";
 import { useAppDispatch } from "../hooks/hooks";
 import { useInit } from "../hooks/use-init";
 import { addProduct } from "../store/products-slice";
 import Button from "../components/UI/Button";
-import Crumbs from "../components/Layout/Crumbs";
+import Crumbs from "../components/Layout/Crumbs/Crumbs";
 import EditProductItem from "../components/admin-panel/EditProductItem";
-import HorisontalGap from "../components/Layout/HorisontalGap";
+import HorisontalGap from "../components/Layout/HorisontalGap/HorisontalGap";
 
 const params = [
   { url: "", name: "Главная" },

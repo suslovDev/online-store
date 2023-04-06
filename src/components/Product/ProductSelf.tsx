@@ -1,15 +1,15 @@
 import { FC, useState } from "react";
 import classes from "./ProductSelf.module.css";
-import { IProductItem } from "./IProductItem";
+import { IProductItem } from "./product-item/IProductItem";
 import { useAppDispatch } from "../../hooks/hooks";
 import { plusToCart } from "../../store/cart-slice";
 import AmountControl from "../UI/AmountControl";
 import Accordeon from "../UI/Accordeon";
 import Button from "../UI/Button";
 import Price from "../UI/Price";
-import ProductFeautere from "./ProductFeature";
+import ProductFeautere from "./product-feature/ProductFeature";
 import ProductSize from "./ProductSize";
-import VerticalGap from "../Layout/HorisontalGap";
+import VerticalGap from "../Layout/HorisontalGap/HorisontalGap";
 
 const ProductSelf: FC<{ product: IProductItem }> = ({ product }) => {
   const [quantity, setQuantity] = useState<number>(1);

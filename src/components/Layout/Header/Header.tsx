@@ -1,11 +1,11 @@
 import { FC } from "react";
 import classes from "./Header.module.css";
-import HeaderMobile from "./HeaderMobile";
-import HeaderCart from "../Cart/HeaderCart";
-import SearchForm from "../UI/SearchForm";
-import Container from "./Container";
-import Button from "../UI/Button";
-import { useAppSelector } from "../../hooks/hooks";
+import HeaderMobile from "../HeaderMobile/HeaderMobile";
+import HeaderCart from "../../Cart/header_cart-button/HeaderCart";
+import SearchForm from "../../UI/SearchForm";
+import Container from "../Container/Container";
+import Button from "../../UI/Button";
+import { useAppSelector } from "../../../hooks/hooks";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
 

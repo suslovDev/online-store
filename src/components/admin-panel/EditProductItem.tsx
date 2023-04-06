@@ -2,7 +2,7 @@ import { FC, useState, useEffect, useRef } from "react";
 import { CARE } from "../../data/care";
 import Button from "../UI/Button";
 import classes from "./EditProductItem.module.css";
-import { IProductItem } from "../Product/IProductItem";
+import { IProductItem } from "../Product/product-item/IProductItem";
 
 import { useAppDispatch, useAppSelector } from "../../hooks/hooks";
 import { removeProduct, replaceProduct } from "../../store/products-slice";

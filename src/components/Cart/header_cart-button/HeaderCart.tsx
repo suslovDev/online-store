@@ -2,7 +2,7 @@ import { FC, useEffect, useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { IHeaderCart } from "./IHeaderCart";
 import classes from "./HeaderCart.module.css";
-import Price from "../UI/Price";
+import Price from "../../UI/Price";
 
 const HeaderCart: FC<IHeaderCart> = ({ items, total }) => {
   const [isHighlighted, setIsHighlighted] = useState(false);

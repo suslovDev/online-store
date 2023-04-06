@@ -1,6 +1,6 @@
-import Container from "../components/Layout/Container";
-import Crumbs from "../components/Layout/Crumbs";
-import HorisontalGap from "../components/Layout/HorisontalGap";
+import Container from "../components/Layout/Container/Container";
+import Crumbs from "../components/Layout/Crumbs/Crumbs";
+import HorisontalGap from "../components/Layout/HorisontalGap/HorisontalGap";
 
 const params = [
   { url: "", name: "Главная" },

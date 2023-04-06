@@ -1,8 +1,8 @@
 import { FC, useState } from "react";
 import classes from "./Checkboxes.module.css";
-import { useAppSelector } from "../../hooks/hooks";
-import { useFilter } from "../../hooks/use-filter";
-import { TItem, getPair } from "../../helpers/get-pair";
+import { useAppSelector } from "../../../../hooks/hooks";
+import { useFilter } from "../../../../hooks/use-filter";
+import { TItem, getPair } from "../../../../helpers/get-pair";
 import Item from "./Item";
 
 const Checkboxes: FC = () => {

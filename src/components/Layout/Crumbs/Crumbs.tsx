@@ -2,7 +2,7 @@ import { FC } from "react";
 import classes from "./Crumbs.module.css";
 import { Link } from "react-router-dom";
 import { ICrumbs } from "./ICrumbs";
-import VerticalGap from "./HorisontalGap";
+import VerticalGap from "../HorisontalGap/HorisontalGap";
 
 const Crumbs: FC<ICrumbs> = ({ params }) => {
   return (

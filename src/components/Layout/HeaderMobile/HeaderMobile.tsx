@@ -1,8 +1,8 @@
 import { FC } from "react";
 import classes from "./HeaderMobile.module.css";
 import { iHeaderMobile } from "./IHeaderMobile";
-import HeaderCart from "../Cart/HeaderCart";
-import Container from "./Container";
+import HeaderCart from "../../Cart/header_cart-button/HeaderCart";
+import Container from "../Container/Container";
 
 const HeaderMobile: FC<iHeaderMobile> = ({ cart, total }) => {
   return (

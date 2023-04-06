@@ -2,12 +2,12 @@ import { FC } from "react";
 import classes from "./ProductItem.module.css";
 import { IProductItem } from "./IProductItem";
 import { useNavigate } from "react-router-dom";
-import { useAppDispatch } from "../../hooks/hooks";
-import { plusToCart } from "../../store/cart-slice";
-import ProductFeautere from "./ProductFeature";
-import ProductSize from "./ProductSize";
-import Button from "../UI/Button";
-import Price from "../UI/Price";
+import { useAppDispatch } from "../../../hooks/hooks";
+import { plusToCart } from "../../../store/cart-slice";
+import ProductFeautere from "../product-feature/ProductFeature";
+import ProductSize from "../ProductSize";
+import Button from "../../UI/Button";
+import Price from "../../UI/Price";
 
 const ProductItem: FC<{ item: IProductItem }> = ({ item }) => {
   let {

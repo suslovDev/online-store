@@ -1,4 +1,4 @@
-import { IProductItem } from "../../components/Product/IProductItem";
+import { IProductItem } from "../../components/Product/product-item/IProductItem";
 
 interface ICartItem extends IProductItem {
     quantity: number;

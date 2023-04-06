@@ -1,9 +1,9 @@
 import { FC, useState } from "react";
 import classes from "./CareFilterTop.module.css";
 import { ICareFilterTop } from "./ICareFilterTop";
-import { useAppDispatch } from "../../hooks/hooks";
-import { setCurrent } from "../../store/ui-slice";
-import { useFilter } from "../../hooks/use-filter";
+import { useAppDispatch } from "../../../hooks/hooks";
+import { setCurrent } from "../../../store/ui-slice";
+import { useFilter } from "../../../hooks/use-filter";
 
 const CareFilterTop: FC<ICareFilterTop> = ({ selected, list, onSelect }) => {
   const [clickedId, setClickedId] = useState<number>(0);

@@ -1,7 +1,7 @@
 import { FC } from "react";
 import classes from "./ProductList.module.css";
 import { IProductList } from "./IProductList";
-import ProductItem from "../Product/ProductItem";
+import ProductItem from "../Product/product-item/ProductItem";
 
 const ProductList: FC<IProductList> = ({ products }) => {
   return (
