@@ -1,32 +1,30 @@
 .amount {
-  display: flex;
-  justify-content: space-between;
-  width: 113px;
+ width:113px;
+display:flex;
+justify-content:space-between; 
 }
 
 .amount button {
-  all: unset;
-  height: fit-content;
-  padding: 4px 14px;
-  border-radius: 1000px;
-  background: linear-gradient(
+ all:unset;
+color:#3f4e65;
+cursor:pointer;
+font-size:12px;
+font-weight:300;
+padding:4px 14px;
+line-height:15px;
+text-align:center;
+height:fit-content;
+border-radius:1000px;
+background:linear-gradient(
     90deg,
     rgba(255, 198, 80, 0.3) 0%,
     rgba(254, 202, 110, 0.3) 97.25%
-  );
-  cursor: pointer;
-  font-weight: 300;
-  font-size: 12px;
-  line-height: 15px;
-  text-align: center;
-
-  color: #3f4e65;
+  ); 
 }
 
 .amount span {
-  font-weight: 500;
-  font-size: 14px;
-  line-height: 130%;
-
-  color: #3f4e65;
+ color:#3f4e65;
+font-size:14px;
+font-weight:500;
+line-height:130%; 
 }

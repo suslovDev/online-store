@@ -1,5 +1,5 @@
-import classes from "./Pagination.module.css";
 import { FC, useState, useEffect } from "react";
+import classes from "./Pagination.module.css";
 import { IPagination } from "./IPagination";
 
 const Pagination: FC<IPagination> = ({ products, perPage, onShowSlice }) => {

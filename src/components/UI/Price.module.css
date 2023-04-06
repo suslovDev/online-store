@@ -1,17 +1,17 @@
 .standart {
-  font-style: normal;
-  line-height: 130%;
-  color: #111111;
-  font-weight: 800;
-  font-size: 16px;
+ color:#111111;
+font-size:16px;
+font-weight:800;
+line-height:130%;
+font-style:normal; 
 }
 
 .small {
-  font-weight: 600;
-  font-size: 14px;
+ font-size:14px;
+font-weight:600; 
 }
 
 .large {
-  font-weight: 700;
-  font-size: 30px;
+ font-size:30px;
+font-weight:700; 
 }

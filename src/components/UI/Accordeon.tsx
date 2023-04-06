@@ -1,9 +1,9 @@
+import { FC, useState } from "react";
 import classes from "./Accordeon.module.css";
 import { IAccordeon } from "./IAccordeaon";
-import { FC, useState } from "react";
 
 const Accordeon: FC<IAccordeon> = ({ title, className, children }) => {
-  const [isOpen, setIsOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState<boolean>(false);
 
   const handleToggleOpen = () => {
     setIsOpen(!isOpen);

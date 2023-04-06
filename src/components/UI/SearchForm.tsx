@@ -1,12 +1,12 @@
-import Button from "./Button";
-import { ISearchForm } from "./ISearchForm";
-import classes from "./SearchForm.module.css";
 import { FC, useRef } from "react";
+import classes from "./SearchForm.module.css";
+import { ISearchForm } from "./ISearchForm";
+import Button from "./Button";
 
 const SearchForm: FC<ISearchForm> = ({ onSubmit, placeholder }) => {
   const inputRef = useRef(null);
 
-  const handleSubmit = (curr: any) => {
+  const handleSubmit = (curr: HTMLInputElement) => {
     if (!onSubmit) return;
     onSubmit(curr.value);
   };
@@ -23,7 +23,7 @@ const SearchForm: FC<ISearchForm> = ({ onSubmit, placeholder }) => {
       <div className={classes.button}>
         <Button
           variant='search'
-          onClick={handleSubmit.bind(null, inputRef.current)}
+          onClick={handleSubmit.bind(null, inputRef.current as any)}
         />
       </div>
     </div>
