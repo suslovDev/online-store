@@ -43,7 +43,6 @@ export const CatalogPage: FC = () => {
   return (
     <Container>
       <Crumbs params={params} />
-
       <div className={classes.header}>
         <div className={classes.top}>
           <h2 className={classes.heading}>Косметика и гигиена</h2>
