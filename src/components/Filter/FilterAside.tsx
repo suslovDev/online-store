@@ -10,22 +10,33 @@ import Checkboxes from "./Checkboxes";
 import PriceFilter from "./PriceFilter";
 import { filterProducts, setFilter } from "../../store/products-slice";
 
+import { useFilter } from "./use-filter";
+
 const FilterAside: FC = () => {
   const selectedCare = useAppSelector((state) => state.ui.currentCare);
-  const filter = useAppSelector((state) => state.products.filter);
+  //const filter = useAppSelector((state) => state.products.filter);
 
   const dispatch = useAppDispatch();
 
-  useEffect(() => {
+  /*   useEffect(() => {
     dispatch(filterProducts(filter));
-  }, [filter]);
+  }, [filter]); */
+  let careType: string | undefined = "";
+
+  const filterByCare = useFilter();
+  const filterBySubstr = useFilter();
 
   const handleSelect = (id: number) => {
-    const careType = CARE.find((item) => item.id === id)?.heading.toLowerCase();
+    careType = CARE.find((item) => item.id === id)?.heading.toLowerCase();
     if (!careType) return;
-    dispatch(setFilter({ ...filter, care: careType }));
+    // dispatch(setFilter({ ...filter, care: careType }));
+    filterByCare({ care: careType });
     dispatch(setCurrent(id));
   };
+
+  const handleSubmit = (val: string) => {
+    filterBySubstr({substr: val})
+  }
 
   return (
     <div className={classes.filter}>
@@ -35,7 +46,7 @@ const FilterAside: FC = () => {
         <h4>Производитель</h4>
         <SearchForm
           placeholder='Поиск...'
-          onSubmit={(val) => dispatch(setFilter({ ...filter, substr: val }))}
+          onSubmit={handleSubmit}
         />
         <Checkboxes />
         {CARE.map((item) => {

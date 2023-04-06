@@ -3,20 +3,26 @@ import { FC, useState, useEffect } from "react";
 import { useAppDispatch, useAppSelector } from "../../hooks/hooks";
 import { filterProducts, setFilter } from "../../store/products-slice";
 
+import { useFilter } from "./use-filter";
+
 const PriceFilter: FC = () => {
   const [from, setFrom] = useState<any>(0);
   const [to, setTo] = useState<any>(10000);
 
-  const filter = useAppSelector((state) => state.products.filter);
+  /* const filter = useAppSelector((state) => state.products.filter);
 
   const dispatch = useAppDispatch();
 
   useEffect(() => {
     dispatch(filterProducts(filter));
   }, [filter]);
+ */
+
+  const filterByPrice  = useFilter();
 
   const handleBlure = () => {
-    dispatch(setFilter({ ...filter, priceRange: { from, to } }));
+    //dispatch(setFilter({ ...filter, priceRange: { from, to } }));
+    filterByPrice({priceRange: { from, to }});
   };
   return (
     <>
