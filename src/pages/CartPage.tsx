@@ -2,13 +2,13 @@ import { FC, useState } from "react";
 import classes from "./CartPage.module.css";
 import { clearCart } from "../store/cart-slice";
 import { useAppSelector, useAppDispatch } from "../hooks/hooks";
-import Button from "../components/UI/Button";
+import Button from "../components/UI/button/Button";
 import CartItem from "../components/Cart/cart-item/CartItem";
 import Container from "../components/Layout/Container/Container";
 import Crumbs from "../components/Layout/Crumbs/Crumbs";
 import HorisontalGap from "../components/Layout/HorisontalGap/HorisontalGap";
 import ThanksOrderModal from "../components/Cart/modal/ThanksOrderModal";
-import Price from "../components/UI/Price";
+import Price from "../components/UI/price/Price";
 
 const params = [
   { url: "", name: "Главная" },

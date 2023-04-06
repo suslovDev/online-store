@@ -7,7 +7,7 @@ import { CARE } from "../../../data/care";
 import CareList from "../CareList";
 import Checkboxes from "./filter-check/Checkboxes";
 import PriceFilter from "./filter-price/PriceFilter";
-import SearchForm from "../../UI/SearchForm";
+import SearchForm from "../../UI/search/SearchForm";
 
 const FilterAside: FC = () => {
   const selectedCare = useAppSelector((state) => state.ui.currentCare);

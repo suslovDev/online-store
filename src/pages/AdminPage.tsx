@@ -4,7 +4,7 @@ import Container from "../components/Layout/Container/Container";
 import { useAppDispatch } from "../hooks/hooks";
 import { useInit } from "../hooks/use-init";
 import { addProduct } from "../store/products-slice";
-import Button from "../components/UI/Button";
+import Button from "../components/UI/button/Button";
 import Crumbs from "../components/Layout/Crumbs/Crumbs";
 import EditProductItem from "../components/admin-panel/EditProductItem";
 import HorisontalGap from "../components/Layout/HorisontalGap/HorisontalGap";

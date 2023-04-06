@@ -1,6 +1,6 @@
 import { FC, useState, useEffect, useRef } from "react";
 import { CARE } from "../../data/care";
-import Button from "../UI/Button";
+import Button from "../UI/button/Button";
 import classes from "./EditProductItem.module.css";
 import { IProductItem } from "../Product/product-item/IProductItem";
 

@@ -1,8 +1,8 @@
 import { FC } from "react";
 import classes from "./CartItem.module.css";
-import AmountControl from "../../UI/AmountControl";
-import Button from "../../UI/Button";
-import Price from "../../UI/Price";
+import AmountControl from "../../UI/amount-control/AmountControl";
+import Button from "../../UI/button/Button";
+import Price from "../../UI/price/Price";
 import ProductSize from "../../Product/product-size/ProductSize";
 import { IProductItem } from "../../Product/product-item/IProductItem";
 import { useAppDispatch, useAppSelector } from "../../../hooks/hooks";

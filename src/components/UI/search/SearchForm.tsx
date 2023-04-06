@@ -1,7 +1,7 @@
 import { FC, useRef } from "react";
 import classes from "./SearchForm.module.css";
 import { ISearchForm } from "./ISearchForm";
-import Button from "./Button";
+import Button from "../button/Button";
 
 const SearchForm: FC<ISearchForm> = ({ onSubmit, placeholder }) => {
   const inputRef = useRef(null);

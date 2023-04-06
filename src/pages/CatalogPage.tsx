@@ -9,7 +9,7 @@ import Container from "../components/Layout/Container/Container";
 import Crumbs from "../components/Layout/Crumbs/Crumbs";
 import FilterAside from "../components/Filter/filter-aside/FilterAside";
 import HorisontalGap from "../components/Layout/HorisontalGap/HorisontalGap";
-import Pagination from "../components/UI/Pagination";
+import Pagination from "../components/UI/pagination/Pagination";
 import ProductList from "../components/Products/ProductList";
 import SortCatalog from "../components/Sort/SortCatalog";
 

@@ -6,8 +6,8 @@ import { useAppDispatch } from "../../../hooks/hooks";
 import { plusToCart } from "../../../store/cart-slice";
 import ProductFeautere from "../product-feature/ProductFeature";
 import ProductSize from "../product-size/ProductSize";
-import Button from "../../UI/Button";
-import Price from "../../UI/Price";
+import Button from "../../UI/button/Button";
+import Price from "../../UI/price/Price";
 
 const ProductItem: FC<{ item: IProductItem }> = ({ item }) => {
   let {
