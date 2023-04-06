@@ -6,6 +6,7 @@ const CareList: FC<ICarelist> = ({ id, selected, title, children }) => {
   const headingClasses = `${classes.heading} ${
     id === selected ? classes.selected : ""
   }`;
+
   return (
     <div className={classes.care}>
       <h3 className={headingClasses}>{title}</h3>

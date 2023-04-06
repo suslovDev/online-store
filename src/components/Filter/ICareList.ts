@@ -1,6 +1,6 @@
 export interface ICarelist {
     selected: number | null;
-    id: number; 
+    id: number;
     title: string;
     children: React.ReactNode;
 }

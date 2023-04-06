@@ -1,29 +1,16 @@
-import classes from "./PriceFilter.module.css";
 import { FC, useState, useEffect } from "react";
-import { useAppDispatch, useAppSelector } from "../../hooks/hooks";
-import { filterProducts, setFilter } from "../../store/products-slice";
-
+import classes from "./PriceFilter.module.css";
 import { useFilter } from "./use-filter";
 
 const PriceFilter: FC = () => {
-  const [from, setFrom] = useState<any>(0);
-  const [to, setTo] = useState<any>(10000);
-
-  /* const filter = useAppSelector((state) => state.products.filter);
-
-  const dispatch = useAppDispatch();
-
-  useEffect(() => {
-    dispatch(filterProducts(filter));
-  }, [filter]);
- */
-
-  const filterByPrice  = useFilter();
+  const filterByPrice = useFilter();
+  const [from, setFrom] = useState<string | number>(0);
+  const [to, setTo] = useState<string | number>(10000);
 
   const handleBlure = () => {
-    //dispatch(setFilter({ ...filter, priceRange: { from, to } }));
-    filterByPrice({priceRange: { from, to }});
+    filterByPrice({ priceRange: { from, to } });
   };
+
   return (
     <>
       <div className={classes.price}>

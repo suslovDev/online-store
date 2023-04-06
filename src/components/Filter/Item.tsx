@@ -1,4 +1,4 @@
-import { FC, useState, useEffect } from "react";
+import { FC, useState } from "react";
 
 const Item: FC<any> = ({ item, onClick }) => {
   const [checked, setChecked] = useState(false);

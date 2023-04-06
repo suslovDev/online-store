@@ -1,31 +1,20 @@
-import { FC, useState, useEffect } from "react";
+import { FC, useState } from "react";
 import classes from "./CareFilterTop.module.css";
 import { ICareFilterTop } from "./ICareFilterTop";
-import { useAppDispatch, useAppSelector } from "../../hooks/hooks";
+import { useAppDispatch } from "../../hooks/hooks";
 import { setCurrent } from "../../store/ui-slice";
-import { filterProducts, setFilter } from "../../store/products-slice";
-
 import { useFilter } from "./use-filter";
 
 const CareFilterTop: FC<ICareFilterTop> = ({ selected, list, onSelect }) => {
   const [clickedId, setClickedId] = useState<number>(0);
-/*   const filter = useAppSelector((state) => state.products.filter); */
-
-  const dispatch = useAppDispatch();
-
-/*   const p = { care: "за задом" };
-
-  useEffect(() => {
-    dispatch(filterProducts(filter));
-  }, [filter]); */
 
   const filterByCare = useFilter();
+  const dispatch = useAppDispatch();
 
   const handleClick = (id: number) => {
     if (id === clickedId) {
       setClickedId(0);
-      //dispatch(setFilter({ ...filter, care: "" }));
-      filterByCare({care:""});
+      filterByCare({ care: "" });
       dispatch(setCurrent(0));
     } else {
       setClickedId(id);

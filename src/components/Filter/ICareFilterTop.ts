@@ -3,7 +3,6 @@ type IItem = {
     heading: string;
     links: Array<string>;
 }
-
 export interface ICareFilterTop {
     selected: number | null;
     list: IItem[];

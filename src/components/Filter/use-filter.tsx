@@ -9,9 +9,9 @@ export const useFilter = () => {
 
   useEffect(() => {
     dispatch(filterProducts(filter));
-  }, [filter]);
+  }, [filter, dispatch]);
 
-  const filterProd = (p: any) => {
+  const filterProd = (p: any) => { //не забыть описать типы!
     let finalFilter = { ...filter, ...p };
     dispatch(setFilter(finalFilter));
   };

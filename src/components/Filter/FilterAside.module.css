@@ -1,64 +1,63 @@
 .filter {
-  width: 238px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  gap: 10px;
+ gap:10px;
+width:238px;
+display:flex;
+flex-direction:column;
+justify-content:center; 
 }
+
 .filter h4 {
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 150%;
-
-  color: #111111;
+ color:#111111;
+font-size:16px;
+font-weight:500;
+line-height:150%; 
 }
-.header {
-  text-transform: uppercase;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 150%;
 
-  color: #111111;
+.header {
+ color:#111111;
+font-size:16px;
+font-weight:500;
+line-height:150%;
+text-transform:uppercase; 
 }
 
 .params {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
+ gap:15px;
+display:flex;
+flex-direction:column; 
 }
 
 .rest {
-  padding-bottom: 20px;
-  border-bottom: 1px dashed rgb(63, 78, 101, 0.3);
+ padding-bottom:20px;
+border-bottom:1px dashed rgb(63, 78, 101, 0.3); 
 }
-.rest button {
-  all: unset;
-  font-size: 12px;
-  line-height: 150%;
-  position: relative;
 
-  color: #3f4e65;
-  cursor: pointer;
+.rest button {
+ all:unset;
+color:#3f4e65;
+font-size:12px;
+cursor:pointer;
+line-height:150%;
+position:relative; 
 }
 
 .rest button::after {
-  content: "";
-  display: block;
-  width: 16px;
-  height: 16px;
-  background-image: url("/public/drop-img.png");
-  background-position: center;
-  background-size: 8px;
-  background-repeat: no-repeat;
-  position: absolute;
-  right: -16px;
-  bottom: 2px;
+ content:"";
+width:16px;
+bottom:2px;
+height:16px;
+right:-16px;
+display:block;
+position:absolute;
+background-size:8px;
+background-position:center;
+background-repeat:no-repeat;
+background-image:url("/public/drop-img.png"); 
 }
 
 .accordeon {
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 150%;
-
-  color: #3f4e65;
+ color:#3f4e65;
+font-size:12px;
+font-weight:500;
+line-height:150%; 
 }

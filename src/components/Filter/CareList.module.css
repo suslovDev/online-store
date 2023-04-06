@@ -1,35 +1,33 @@
 .care {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-  padding-bottom: 20px;
-  border-bottom: 1px dashed rgba(63, 78, 101, 0.3);
+ gap:15px;
+display:flex;
+padding-bottom:20px;
+flex-direction:column;
+border-bottom:1px dashed rgba(63, 78, 101, 0.3); 
 }
 
 .heading {
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 150%;
-  text-transform: uppercase;
-
-  color: #111111;
+ color:#111111;
+font-size:16px;
+font-weight:500;
+line-height:150%;
+text-transform:uppercase; 
 }
 
 .list {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 150%;
-
-  color: #3f4e65;
+ gap:10px;
+display:flex;
+color:#3f4e65;
+font-size:14px;
+font-weight:400;
+line-height:150%;
+flex-direction:column; 
 }
 
 .list li {
-  cursor: pointer;
+ cursor:pointer; 
 }
 
 .selected {
-    border-bottom: 1px dashed orange;
+ border-bottom:1px dashed orange; 
 }

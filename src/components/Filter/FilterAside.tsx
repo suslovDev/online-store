@@ -14,29 +14,23 @@ import { useFilter } from "./use-filter";
 
 const FilterAside: FC = () => {
   const selectedCare = useAppSelector((state) => state.ui.currentCare);
-  //const filter = useAppSelector((state) => state.products.filter);
 
   const dispatch = useAppDispatch();
-
-  /*   useEffect(() => {
-    dispatch(filterProducts(filter));
-  }, [filter]); */
-  let careType: string | undefined = "";
-
   const filterByCare = useFilter();
   const filterBySubstr = useFilter();
+
+  let careType: string | undefined = "";
 
   const handleSelect = (id: number) => {
     careType = CARE.find((item) => item.id === id)?.heading.toLowerCase();
     if (!careType) return;
-    // dispatch(setFilter({ ...filter, care: careType }));
     filterByCare({ care: careType });
     dispatch(setCurrent(id));
   };
 
   const handleSubmit = (val: string) => {
-    filterBySubstr({substr: val})
-  }
+    filterBySubstr({ substr: val });
+  };
 
   return (
     <div className={classes.filter}>
@@ -44,10 +38,7 @@ const FilterAside: FC = () => {
       <PriceFilter />
       <div className={classes.params}>
         <h4>Производитель</h4>
-        <SearchForm
-          placeholder='Поиск...'
-          onSubmit={handleSubmit}
-        />
+        <SearchForm placeholder='Поиск...' onSubmit={handleSubmit} />
         <Checkboxes />
         {CARE.map((item) => {
           return (
