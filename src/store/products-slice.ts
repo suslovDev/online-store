@@ -1,6 +1,5 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 import { IFilter, IOrder, ProductsState } from "./types/product-slice";
-import { stat } from "fs";
 
 const initialState: ProductsState = {
     products: [],
@@ -33,7 +32,7 @@ const productsSlice = createSlice({
         },
         removeProduct(state, action) {
             state.originProducts = state.originProducts.filter(prod => prod.barcode !== action.payload);
-            console.log(`Удалил ${action.payload} элемент!`)
+            //console.log(`Удалил ${action.payload} элемент!`)
         },
         sortProds(state) {
             let { order } = state.order;

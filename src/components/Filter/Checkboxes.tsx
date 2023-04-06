@@ -11,7 +11,7 @@ const Checkboxes: FC = () => {
   );
   const { manufacturer } = useAppSelector((state) => state.products.filter);
   const [showAll, setShowAll] = useState(false);
-  const [show, setShow] = useState<TItem[]>();
+  //const [show, setShow] = useState<TItem[]>();
 
   const filterHasManufact = useFilter();
   const filterNotManufact = useFilter();

@@ -1,4 +1,4 @@
-import { FC, useState, useEffect } from "react";
+import { FC, useState } from "react";
 import classes from "./PriceFilter.module.css";
 import { useFilter } from "../../hooks/use-filter";
 

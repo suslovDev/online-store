@@ -1,16 +1,13 @@
+import { FC } from "react";
 import classes from "./FilterAside.module.css";
-import { FC, useEffect } from "react";
-import SearchForm from "../UI/SearchForm";
-import CareList from "./CareList";
-import { CARE } from "../../data/care";
 import { useAppSelector, useAppDispatch } from "../../hooks/hooks";
+import { useFilter } from "../../hooks/use-filter";
 import { setCurrent } from "../../store/ui-slice";
-
+import { CARE } from "../../data/care";
+import CareList from "./CareList";
 import Checkboxes from "./Checkboxes";
 import PriceFilter from "./PriceFilter";
-import { filterProducts, setFilter } from "../../store/products-slice";
-
-import { useFilter } from "../../hooks/use-filter";
+import SearchForm from "../UI/SearchForm";
 
 const FilterAside: FC = () => {
   const selectedCare = useAppSelector((state) => state.ui.currentCare);
