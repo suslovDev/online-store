@@ -1,5 +1,5 @@
-import classes from "./ProductList.module.css";
 import { FC } from "react";
+import classes from "./ProductList.module.css";
 import { IProductList } from "./IProductList";
 import ProductItem from "../Product/ProductItem";
 
