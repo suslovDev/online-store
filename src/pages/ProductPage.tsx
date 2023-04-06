@@ -3,7 +3,7 @@ import { useAppSelector } from "../hooks/hooks";
 import { useParams } from "react-router-dom";
 import Container from "../components/Layout/Container/Container";
 import Crumbs from "../components/Layout/Crumbs/Crumbs";
-import ProductSelf from "../components/Product/ProductSelf";
+import ProductSelf from "../components/Product/product-self/ProductSelf";
 
 export const ProductPage: FC = () => {
   const { id } = useParams();

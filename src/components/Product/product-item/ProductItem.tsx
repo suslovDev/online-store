@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 import { useAppDispatch } from "../../../hooks/hooks";
 import { plusToCart } from "../../../store/cart-slice";
 import ProductFeautere from "../product-feature/ProductFeature";
-import ProductSize from "../ProductSize";
+import ProductSize from "../product-size/ProductSize";
 import Button from "../../UI/Button";
 import Price from "../../UI/Price";
 

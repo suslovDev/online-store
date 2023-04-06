@@ -3,7 +3,7 @@ import classes from "./CartItem.module.css";
 import AmountControl from "../../UI/AmountControl";
 import Button from "../../UI/Button";
 import Price from "../../UI/Price";
-import ProductSize from "../../Product/ProductSize";
+import ProductSize from "../../Product/product-size/ProductSize";
 import { IProductItem } from "../../Product/product-item/IProductItem";
 import { useAppDispatch, useAppSelector } from "../../../hooks/hooks";
 import {
