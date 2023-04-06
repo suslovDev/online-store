@@ -1,4 +1,4 @@
-export interface ISearchForm {
+export interface ISearchForm {  
     onSubmit?: (val:string) => void;
     placeholder?: string;
 }
