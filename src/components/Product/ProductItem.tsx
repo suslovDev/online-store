@@ -1,13 +1,13 @@
+import { FC } from "react";
 import classes from "./ProductItem.module.css";
 import { IProductItem } from "./IProductItem";
-import { FC } from "react";
-import ProductFeautere from "./ProductFeature";
-import Price from "../UI/Price";
-import Button from "../UI/Button";
-import ProductSize from "./ProductSize";
 import { useNavigate } from "react-router-dom";
 import { useAppDispatch } from "../../hooks/hooks";
 import { plusToCart } from "../../store/cart-slice";
+import ProductFeautere from "./ProductFeature";
+import ProductSize from "./ProductSize";
+import Button from "../UI/Button";
+import Price from "../UI/Price";
 
 const ProductItem: FC<{ item: IProductItem }> = ({ item }) => {
   let {
@@ -36,7 +36,6 @@ const ProductItem: FC<{ item: IProductItem }> = ({ item }) => {
           <span className={classes.accent}>{title} </span>
           {description}
         </h3>
-
         <ProductFeautere name='Штрихкод' value={barcode} />
         <ProductFeautere name='Производитель' value={manufacturer} />
         <ProductFeautere name='Бренд' value={brand} />

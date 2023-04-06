@@ -1,6 +1,6 @@
+import { FC } from "react";
 import classes from "./ProductFeautere.module.css";
 import { IProductFeature } from "./IProductFeature";
-import { FC } from "react";
 
 const ProductFeautere: FC<IProductFeature> = ({ name, value }) => {
   return (

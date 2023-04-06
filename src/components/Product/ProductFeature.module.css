@@ -1,12 +1,14 @@
 .features {
-  font-size: 14px;
-  line-height: 150%;
-  color: #3f4e65;
+ color:#3f4e65;
+font-size:14px;
+line-height:150%; 
 }
+
 .name {
-  font-weight: 300;
+ font-weight:300; 
 }
+
 .value {
-  font-weight: 500;
-  color: #111111;
+ color:#111111;
+font-weight:500; 
 }
