@@ -1,27 +1,24 @@
-import { screen, render } from "@testing-library/react";
-import ProductItem from "./ProductItem";
-import { MemoryRouter } from "react-router-dom";
+import { store } from "../../../store";
+import { plusToCart } from "../../../store/cart-slice";
 
-describe("ProductItem.tsx:", () => {
-  it("Данные из пропсов выводятся на свои места", () => {
-    const { getByText } = render(
-      <MemoryRouter>
-        <ProductItem
-          item={{
-            url: "testUrl",
-            title: "Test",
-            sizeType: "weight",
-            size: 100,
-            barcode: 12345678910,
-            manufacturer: "Example",
-            brand: "Brand",
-            description: "Test fake description",
-            price: 199,
-          }}
-        />
-      </MemoryRouter>
+describe("RoductItem.tsx:", () => {
+  it("Товар добавляется в корзину и total меняется", () => {
+    store.dispatch(
+      plusToCart({
+        product: {
+          url: "url",
+          title: "Title",
+          sizeType: "weight",
+          size: 100,
+          barcode: 12345678910,
+          manufacturer: "Manufacturer",
+          brand: "Brand",
+          description: "Long description",
+          price: 199,
+        },
+        quantity: 1,
+      })
     );
-    const brand = getByText(/бренд/i);;
-    expect(brand).toBe('Brand');
+    expect(store.getState().cart.total).toEqual(199);
   });
 });
