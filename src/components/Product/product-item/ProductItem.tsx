@@ -2,15 +2,14 @@ import { FC } from "react";
 import classes from "./ProductItem.module.css";
 import { IProductItem } from "./IProductItem";
 import { useNavigate } from "react-router-dom";
+import { useAppDispatch } from "../../../hooks/hooks";
+import { plusToCart } from "../../../store/cart-slice";
 import ProductFeautere from "../product-feature/ProductFeature";
 import ProductSize from "../product-size/ProductSize";
 import Button from "../../UI/button/Button";
 import Price from "../../UI/price/Price";
 
-const ProductItem: FC<{ item: IProductItem; onBtnClick?: any }> = ({
-  item,
-  onBtnClick,
-}) => {
+const ProductItem: FC<{ item: IProductItem }> = ({ item }) => {
   let {
     url,
     title,
@@ -24,6 +23,8 @@ const ProductItem: FC<{ item: IProductItem; onBtnClick?: any }> = ({
   } = item;
   const navigate = useNavigate();
 
+  const dispatch = useAppDispatch();
+
   return (
     <div className={classes.product}>
       <div className={classes.header}>
@@ -32,9 +33,7 @@ const ProductItem: FC<{ item: IProductItem; onBtnClick?: any }> = ({
       <div className={classes.content}>
         <ProductSize type={sizeType} value={size} />
         <h3 className={classes.title} onClick={() => navigate(`${barcode}`)}>
-          <span date-testid='title' className={classes.accent}>
-            {title}
-          </span>
+          <span className={classes.accent}>{title} </span>
           {description}
         </h3>
         <ProductFeautere name='Штрихкод' value={barcode} />
@@ -43,7 +42,11 @@ const ProductItem: FC<{ item: IProductItem; onBtnClick?: any }> = ({
       </div>
       <div className={classes.footer}>
         <Price currency='KZT' value={price} />
-        <Button onClick={onBtnClick} variant='buy'>
+        <Button
+          onClick={() => {
+            dispatch(plusToCart({ product: item, quantity: 1 }));
+          }}
+          variant='buy'>
           В корзину
         </Button>
       </div>
