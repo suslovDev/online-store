@@ -12,7 +12,7 @@ const params = [
 
 export const HomePage = () => {
   return (
-    <Container>
+    <Container data-testid="home-page">
       <Crumbs params={params} />
       <h1>Home Page</h1>
       <p>Походите по ссылкам выше)</p>

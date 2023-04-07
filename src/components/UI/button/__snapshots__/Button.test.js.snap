@@ -1,0 +1,69 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Button.jsx: Выводится корректно с variant: 'buy' 1`] = `
+<button
+  className="button"
+>
+  <img
+    alt=""
+    src="./buy-img.png"
+    width={27}
+  />
+</button>
+`;
+
+exports[`Button.jsx: Выводится корректно с variant: 'buy-large' 1`] = `
+<button
+  className="button large"
+>
+  <img
+    alt=""
+    src="./buy-img.png"
+    width={27}
+  />
+</button>
+`;
+
+exports[`Button.jsx: Выводится корректно с variant: 'catalog' 1`] = `null`;
+
+exports[`Button.jsx: Выводится корректно с variant: 'download' 1`] = `
+<button
+  className="button large"
+>
+  <img
+    alt=""
+    src="./dwld-img.png"
+    width={17}
+  />
+</button>
+`;
+
+exports[`Button.jsx: Выводится корректно с variant: 'remove' 1`] = `
+<button
+  className="button round-large"
+>
+  <img
+    alt=""
+    src="./remove-img.png"
+    width={27}
+  />
+</button>
+`;
+
+exports[`Button.jsx: Выводится корректно с variant: 'search' 1`] = `
+<button
+  className="button round"
+>
+  <img
+    alt=""
+    src="./search-img.png"
+    width={18}
+  />
+</button>
+`;
+
+exports[`Button.jsx: Выводится корректно с variant: 'standart' 1`] = `
+<button
+  className="button large"
+/>
+`;
