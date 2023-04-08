@@ -47,7 +47,7 @@ const CartItem: FC<{ item: IProductItem }> = ({ item }) => {
           <div className={classes.wrap}>
             <Price currency='KZT' value={item.price} type='large' />
           </div>
-          <div className={classes.wrap}>
+          <div className={classes.wrap} data-testid='remove'>
             <Button
               variant='remove'
               onClick={() => dispatch(removeFromCart({ id: item.barcode }))}
