@@ -48,3 +48,4 @@ const state = {
 };
 
 export const AppSelector = (f) => f(state);
+export const AppDispatch = () => (() => {});
