@@ -27,14 +27,9 @@ describe("CartItem.tsx:", () => {
   };
   beforeEach(() => {
     mockAppSelector.mockImplementation(CartItemAppSelector);
-    render(<CartItem item={item} />);
+    render( <CartItem item={item} />);
   });
-  /*   it("Снапшот рендерится корректно с переданными пропсами", () => {
-    const removeBtn = getByTestId("remove");
-    userEvent.click(removeBtn);
-    expect(removeBtn).not.toBeInTheDocument();
-    //userEvent.click(screen.getByText('search'))
-  }); */
+
   it("title выводится корректно", () => {
     const title = screen.getByText(/title/i);
     expect(title).toBeInTheDocument();

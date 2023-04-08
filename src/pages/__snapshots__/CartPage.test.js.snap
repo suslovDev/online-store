@@ -1,0 +1,354 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CartPage.tsx: корзина наполняется товарами 1`] = `
+Object {
+  "asFragment": [Function],
+  "baseElement": <body>
+    <div>
+      <div
+        class="container"
+      >
+        <div
+          style="margin-bottom: 45px;"
+        />
+        <nav>
+          <ul
+            class="crumbs"
+          >
+            <li>
+              <a
+                href="/"
+              >
+                Главная
+              </a>
+            </li>
+            <li>
+              <a
+                href="/cart"
+              >
+                Корзина
+              </a>
+            </li>
+          </ul>
+        </nav>
+        <div
+          style="margin-bottom: 65px;"
+        />
+        <h2
+          class="heading"
+          data-testid="cart-page"
+        >
+          Корзина 
+        </h2>
+        <div
+          style="margin-bottom: 50px;"
+        />
+        <ul>
+          <li>
+            <div
+              class="item"
+            >
+              <div
+                class="image"
+              >
+                <img
+                  alt=""
+                  src="./test-url"
+                />
+              </div>
+              <div
+                class="content"
+              >
+                <div
+                  class="info"
+                >
+                  <div
+                    class="wrap"
+                  >
+                    <img
+                      alt=""
+                      class="img"
+                      src="/weight-img.png"
+                    />
+                    <span
+                      class="value"
+                    >
+                      250 гр.
+                    </span>
+                  </div>
+                  <p
+                    class="title"
+                  >
+                    Title description
+                  </p>
+                  <p
+                    class="description"
+                  >
+                    description
+                  </p>
+                </div>
+                <div
+                  class="actions"
+                >
+                  <div
+                    class="wrap"
+                  >
+                    <div
+                      class="amount"
+                    >
+                      <button>
+                        -
+                      </button>
+                      <span />
+                      <button>
+                        +
+                      </button>
+                    </div>
+                  </div>
+                  <div
+                    class="wrap"
+                  >
+                    <span
+                      class="large"
+                      data-testid="price"
+                    >
+                      199 ₸
+                    </span>
+                  </div>
+                  <div
+                    class="wrap"
+                    data-testid="remove"
+                  >
+                    <button
+                      class="button round-large"
+                    >
+                      <img
+                        alt=""
+                        src="./remove-img.png"
+                        width="27"
+                      />
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </li>
+        </ul>
+        <div
+          class="checkout"
+        >
+          <button
+            class="button large"
+          >
+            Оформить заказ
+          </button>
+          <span
+            class="large"
+            data-testid="price"
+          >
+            0 ₸
+          </span>
+        </div>
+      </div>
+    </div>
+  </body>,
+  "container": <div>
+    <div
+      class="container"
+    >
+      <div
+        style="margin-bottom: 45px;"
+      />
+      <nav>
+        <ul
+          class="crumbs"
+        >
+          <li>
+            <a
+              href="/"
+            >
+              Главная
+            </a>
+          </li>
+          <li>
+            <a
+              href="/cart"
+            >
+              Корзина
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <div
+        style="margin-bottom: 65px;"
+      />
+      <h2
+        class="heading"
+        data-testid="cart-page"
+      >
+        Корзина 
+      </h2>
+      <div
+        style="margin-bottom: 50px;"
+      />
+      <ul>
+        <li>
+          <div
+            class="item"
+          >
+            <div
+              class="image"
+            >
+              <img
+                alt=""
+                src="./test-url"
+              />
+            </div>
+            <div
+              class="content"
+            >
+              <div
+                class="info"
+              >
+                <div
+                  class="wrap"
+                >
+                  <img
+                    alt=""
+                    class="img"
+                    src="/weight-img.png"
+                  />
+                  <span
+                    class="value"
+                  >
+                    250 гр.
+                  </span>
+                </div>
+                <p
+                  class="title"
+                >
+                  Title description
+                </p>
+                <p
+                  class="description"
+                >
+                  description
+                </p>
+              </div>
+              <div
+                class="actions"
+              >
+                <div
+                  class="wrap"
+                >
+                  <div
+                    class="amount"
+                  >
+                    <button>
+                      -
+                    </button>
+                    <span />
+                    <button>
+                      +
+                    </button>
+                  </div>
+                </div>
+                <div
+                  class="wrap"
+                >
+                  <span
+                    class="large"
+                    data-testid="price"
+                  >
+                    199 ₸
+                  </span>
+                </div>
+                <div
+                  class="wrap"
+                  data-testid="remove"
+                >
+                  <button
+                    class="button round-large"
+                  >
+                    <img
+                      alt=""
+                      src="./remove-img.png"
+                      width="27"
+                    />
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+        </li>
+      </ul>
+      <div
+        class="checkout"
+      >
+        <button
+          class="button large"
+        >
+          Оформить заказ
+        </button>
+        <span
+          class="large"
+          data-testid="price"
+        >
+          0 ₸
+        </span>
+      </div>
+    </div>
+  </div>,
+  "debug": [Function],
+  "findAllByAltText": [Function],
+  "findAllByDisplayValue": [Function],
+  "findAllByLabelText": [Function],
+  "findAllByPlaceholderText": [Function],
+  "findAllByRole": [Function],
+  "findAllByTestId": [Function],
+  "findAllByText": [Function],
+  "findAllByTitle": [Function],
+  "findByAltText": [Function],
+  "findByDisplayValue": [Function],
+  "findByLabelText": [Function],
+  "findByPlaceholderText": [Function],
+  "findByRole": [Function],
+  "findByTestId": [Function],
+  "findByText": [Function],
+  "findByTitle": [Function],
+  "getAllByAltText": [Function],
+  "getAllByDisplayValue": [Function],
+  "getAllByLabelText": [Function],
+  "getAllByPlaceholderText": [Function],
+  "getAllByRole": [Function],
+  "getAllByTestId": [Function],
+  "getAllByText": [Function],
+  "getAllByTitle": [Function],
+  "getByAltText": [Function],
+  "getByDisplayValue": [Function],
+  "getByLabelText": [Function],
+  "getByPlaceholderText": [Function],
+  "getByRole": [Function],
+  "getByTestId": [Function],
+  "getByText": [Function],
+  "getByTitle": [Function],
+  "queryAllByAltText": [Function],
+  "queryAllByDisplayValue": [Function],
+  "queryAllByLabelText": [Function],
+  "queryAllByPlaceholderText": [Function],
+  "queryAllByRole": [Function],
+  "queryAllByTestId": [Function],
+  "queryAllByText": [Function],
+  "queryAllByTitle": [Function],
+  "queryByAltText": [Function],
+  "queryByDisplayValue": [Function],
+  "queryByLabelText": [Function],
+  "queryByPlaceholderText": [Function],
+  "queryByRole": [Function],
+  "queryByTestId": [Function],
+  "queryByText": [Function],
+  "queryByTitle": [Function],
+  "rerender": [Function],
+  "unmount": [Function],
+}
+`;

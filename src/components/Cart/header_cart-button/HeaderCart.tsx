@@ -24,7 +24,7 @@ const HeaderCart: FC<IHeaderCart> = ({ items, total }) => {
 
   return (
     <button
-      data-testid='btn'
+      data-testid='to-cart'
       className={classes.button}
       onClick={() => {
         navigate("cart");
