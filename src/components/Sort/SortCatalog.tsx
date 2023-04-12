@@ -17,6 +17,7 @@ const SortCatalog: FC = () => {
       <label className={classes.label}>
         <span className={classes.dropdown}>Сортировать по:</span>
         <select
+          data-testid='order'
           value={type}
           onChange={(e) =>
             dispatch(setOrderType({ type: e.target.value, order: order }))

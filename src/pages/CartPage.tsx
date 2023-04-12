@@ -32,7 +32,7 @@ export const CartPage: FC = () => {
     <Container>
       {isOpen && <ThanksOrderModal onClick={handleOrderDone} />}
       <Crumbs params={params} />
-      <h2 className={classes.heading}>{`Корзина ${
+      <h2 data-testid='cart-page' className={classes.heading}>{`Корзина ${
         cart.length ? "" : "пуста!"
       }`}</h2>
       <HorisontalGap gap='50px' />

@@ -1,14 +1,14 @@
-import { render, screen, fireEvent } from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
 import ThanksOrderModal from "./ThanksOrderModal";
 
 describe("Модальное окно:", () => {
   beforeEach(() => render(<ThanksOrderModal />));
 
-  test("Выводится заголовок", () => {
+  it("Выводится заголовок", () => {
     const headingModal = screen.getByRole("heading");
     expect(headingModal).toBeInTheDocument();
   });
-  test("Выводится сообщение", () => {
+  it("Выводится сообщение", () => {
     const headingText = screen.getByText(/спасибо за заказ/i);
     expect(headingText).toBeInTheDocument();
   });

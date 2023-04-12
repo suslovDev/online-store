@@ -21,7 +21,7 @@ const ProductItem: FC<{ item: IProductItem }> = ({ item }) => {
     description,
     price,
   } = item;
-  const navigate = useNavigate();
+ // const navigate = useNavigate();
 
   const dispatch = useAppDispatch();
 
@@ -32,7 +32,7 @@ const ProductItem: FC<{ item: IProductItem }> = ({ item }) => {
       </div>
       <div className={classes.content}>
         <ProductSize type={sizeType} value={size} />
-        <h3 className={classes.title} onClick={() => navigate(`${barcode}`)}>
+       <h3 className={classes.title} onClick={() => {}/* navigate(`${barcode}`) */}>
           <span className={classes.accent}>{title} </span>
           {description}
         </h3>

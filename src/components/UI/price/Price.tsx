@@ -17,7 +17,7 @@ const Price: FC<IPrice> = ({ value, currency, type }) => {
   }`;
 
   return (
-    <span className={finalClass}>{`${value} ${currencyMap.get(
+    <span data-testid="price" className={finalClass}>{`${value} ${currencyMap.get(
       currency
     )}`}</span>
   );
