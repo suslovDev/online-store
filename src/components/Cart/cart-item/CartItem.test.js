@@ -1,8 +1,8 @@
-import { cleanup, getByTestId, render, screen } from "@testing-library/react";
-import { userEvent } from "@testing-library/user-event";
+import { cleanup, render, screen } from "@testing-library/react";
+
 import CartItem from "./CartItem";
-import { CartPage } from "../../../pages/CartPage";
-import { useAppDispatch, useAppSelector } from "../../../hooks/hooks";
+
+import { useAppSelector } from "../../../hooks/hooks";
 import { CartItemAppSelector } from "./cart-item-selector";
 
 jest.mock("../../../hooks/hooks");
@@ -27,7 +27,7 @@ describe("CartItem.tsx:", () => {
   };
   beforeEach(() => {
     mockAppSelector.mockImplementation(CartItemAppSelector);
-    render( <CartItem item={item} />);
+    render(<CartItem item={item} />);
   });
 
   it("title выводится корректно", () => {
